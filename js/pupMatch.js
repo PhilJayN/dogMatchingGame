@@ -1,15 +1,15 @@
 var main = function () {
 
-  var $showNavBtn = $(".show-nav-btn");
+  var $showNavBtn = $(".hamburger-btn");
   var $primaryNav = $(".primary-nav");
   $showNavBtn.on("click", function() {
     console.log('click');
     $primaryNav.slideToggle("normal", function() {
       if ($primaryNav.is(":visible") ) {
-          $showNavBtn.text("Hide Navigation");
+          $showNavBtn.text("Hide Menu");
       }
       else {
-        $showNavBtn.text("Show Navigation");
+        $showNavBtn.text("Show Menu");
       }
     });
   });

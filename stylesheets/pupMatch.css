@@ -60,6 +60,18 @@ nav ul li.active a {
   background-color: #75a5b0;
 }
 
+.fa-bars {
+  color: #75a5b0;
+}
+
+
+
+.show-nav-btn {
+  color: #fff;
+  display: block;
+  border: 1px solid gray;
+}
+
 /*TABLET rule kicks in when @ 641 and above*/
 @media only screen and (min-width: 641px) {
 
