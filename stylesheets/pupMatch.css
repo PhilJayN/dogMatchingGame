@@ -32,6 +32,10 @@ body {
   cursor: pointer;
 }
 
+.primary-nav {
+  display: none;
+}
+
 .nav-wrapper li {
     width: 100%;
 }
