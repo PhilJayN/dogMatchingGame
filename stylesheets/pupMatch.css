@@ -1,0 +1,36 @@
+/*This is a mobile-first design. default will target mobile devices.
+Media queries will then target tablets and desktops*/
+
+
+
+h1 {
+  color: red;
+}
+
+
+
+
+
+/*rule kicks in when @ 641 and above*/
+/*TABLET*/
+@media only screen and (min-width: 641px) {
+
+  h1 {
+    color: green;
+  }
+
+
+}
+
+
+
+
+/*or try breakpoint at 1141px */
+/*DESKTOP*/
+@media only screen and (min-width: 961px) {
+  h1 {
+    color: silver;
+  }
+
+
+}
