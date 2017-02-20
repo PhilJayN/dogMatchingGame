@@ -16,6 +16,7 @@ html {
 
 body {
   background-color: #fbfbfb;
+  color: rgb(28, 27, 27);
 
 }
 
@@ -24,53 +25,38 @@ body {
 }
 
 .nav-wrapper {
-  background-color: rgb(222, 146, 141);
+  margin: 1em;
+}
+
+.hamburger-wrapper {
+  cursor: pointer;
+}
+
+.nav-wrapper li {
+    width: 100%;
+}
+
+/*margin: .2em 0;*/
+.nav-wrapper a {
+  padding: 1em 0;
+  display: block;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #75a5b0;
+}
+
+/*nav ul li.active a {
+  background-color: #75a5b0;
+}*/
+
+.fa-bars {
+  color: #75a5b0;
 }
 
 .footer-wrapper {
   background-color: rgb(121, 121, 121);
 }
 
-
-.nav-wrapper ul {
-  padding: 1em 0;
-}
-
-.nav-wrapper li {
-    margin: 0 2%;
-    width: 46%;
-    float: left;
-}
-
-
-.nav-wrapper a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  margin: .2em 0;
-  padding: .6em 0;
-  /*border-radius: .2em;*/
-  color: black;
-  border: 1px solid gray;
-}
-
-
-
-nav ul li.active a {
-  background-color: #75a5b0;
-}
-
-.fa-bars {
-  color: #75a5b0;
-}
-
-
-
-.show-nav-btn {
-  color: #fff;
-  display: block;
-  border: 1px solid gray;
-}
 
 /*TABLET rule kicks in when @ 641 and above*/
 @media only screen and (min-width: 641px) {
@@ -92,8 +78,6 @@ nav ul li.active a {
 
 
 }
-
-
 
 
 /*or try breakpoint at 1141px */
