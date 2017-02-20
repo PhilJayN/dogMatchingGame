@@ -14,14 +14,42 @@ html {
    box-sizing: border-box;
 }
 
+.nav-wrapper {
+  background-color: tomato;
+  /*text-align: center;*/
+}
 
-p {
-  color: red;
+.nav-wrapper {
+   border: 3px solid yellow;
+
+}
+
+.nav-wrapper ul {
+  padding: 1em 0;
+}
+
+.nav-wrapper li {
+    margin: 0 2%;
+    width: 46%;
+    float: left;
+}
+
+.nav-wrapper a {
+  /*border: 1px solid green;*/
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: red;
+  margin: .2em 0;
+  padding: .6em 0;
+  border-radius: .6em;
+  box-shadow: 1px 1px 3px #000;
 }
 
 
-
-
+nav ul li.active a {
+  background-color: green;
+}
 
 /*rule kicks in when @ 641 and above*/
 /*TABLET*/
@@ -39,10 +67,18 @@ p {
 
 /*or try breakpoint at 1141px */
 /*DESKTOP*/
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1140px) {
   p {
     color: silver;
   }
 
 
+}
+
+
+/* ----- OTHER STUFF ----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
