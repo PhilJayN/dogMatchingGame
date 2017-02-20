@@ -14,13 +14,18 @@ html {
    box-sizing: border-box;
 }
 
+body {
+  background-color: #fbfbfb;
+
+}
+
 .nav-wrapper {
-  background-color: tomato;
+  /*background-color: tomato;*/
   /*text-align: center;*/
 }
 
 .nav-wrapper {
-   border: 3px solid yellow;
+   /*border: 3px solid yellow;*/
 
 }
 
@@ -34,29 +39,40 @@ html {
     float: left;
 }
 
+
 .nav-wrapper a {
-  /*border: 1px solid green;*/
   display: block;
   text-align: center;
   text-decoration: none;
-  background-color: red;
   margin: .2em 0;
   padding: .6em 0;
-  border-radius: .6em;
-  box-shadow: 1px 1px 3px #000;
+  /*border-radius: .2em;*/
+  color: black;
+  border: 1px solid gray;
 }
+
 
 
 nav ul li.active a {
-  background-color: green;
+  background-color: #75a5b0;
 }
 
-/*rule kicks in when @ 641 and above*/
-/*TABLET*/
+/*TABLET rule kicks in when @ 641 and above*/
 @media only screen and (min-width: 641px) {
 
-  p {
-    color: green;
+  .nav-wrapper ul {
+    padding: 0;
+  }
+
+  .nav-wrapper li {
+    width: auto;
+    margin: 0;
+  }
+
+  .nav-wrapper a {
+    margin: 0;
+    font-size: 1.1em;
+    padding: 1em 1.5em;
   }
 
 
