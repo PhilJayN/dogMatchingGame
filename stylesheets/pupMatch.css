@@ -21,7 +21,7 @@ body {
 }
 
 .header-wrapper {
-  background-color: #2d2c2c;
+  /*background-color: #2d2c2c;*/
 }
 
 .nav-wrapper {
@@ -58,12 +58,25 @@ body {
 }
 
 .footer-wrapper {
-  background-color: rgb(121, 121, 121);
+  background-color: #d9d9a6;
 }
 
 
 /*TABLET rule kicks in when @ 641 and above*/
 @media only screen and (min-width: 641px) {
+
+  .primary-nav {
+    display: block!important;
+  }
+
+  .hamburger-wrapper {
+    color: red;
+    display: none;
+  }
+
+  .nav-wrapper {
+    margin: 1em;
+  }
 
   .nav-wrapper ul {
     padding: 0;
@@ -75,10 +88,36 @@ body {
   }
 
   .nav-wrapper a {
-    margin: 0;
-    font-size: 1.1em;
+    margin: .2em 0;
     padding: 1em 1.5em;
+    display: block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid gray;
+    font-size: 1.1em;
+    float: left;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
@@ -103,7 +142,6 @@ body {
 
 
   }
-
 
 
 }
