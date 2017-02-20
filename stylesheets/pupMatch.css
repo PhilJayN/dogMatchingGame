@@ -1,9 +1,21 @@
 /*This is a mobile-first design. default will target mobile devices.
 Media queries will then target tablets and desktops*/
 
+/*-----prevents iPhone auto resizing in landscape mode -----*/
+html {
+  -webkit-text-size-adjust: none;
+  /*-ms-text-size-adjust: none;*/
+}
+
+/*apply natural box layout, solves problem with some browser padding and width*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
 
 
-h1 {
+p {
   color: red;
 }
 
@@ -15,7 +27,7 @@ h1 {
 /*TABLET*/
 @media only screen and (min-width: 641px) {
 
-  h1 {
+  p {
     color: green;
   }
 
@@ -28,7 +40,7 @@ h1 {
 /*or try breakpoint at 1141px */
 /*DESKTOP*/
 @media only screen and (min-width: 961px) {
-  h1 {
+  p {
     color: silver;
   }
 
