@@ -19,15 +19,18 @@ body {
 
 }
 
-.nav-wrapper {
-  /*background-color: tomato;*/
-  /*text-align: center;*/
+.header-wrapper {
+  background-color: #2d2c2c;
 }
 
 .nav-wrapper {
-   /*border: 3px solid yellow;*/
-
+  background-color: rgb(222, 146, 141);
 }
+
+.footer-wrapper {
+  background-color: rgb(121, 121, 121);
+}
+
 
 .nav-wrapper ul {
   padding: 1em 0;
@@ -84,9 +87,23 @@ nav ul li.active a {
 /*or try breakpoint at 1141px */
 /*DESKTOP*/
 @media only screen and (min-width: 1140px) {
-  p {
-    color: silver;
+
+  header, nav, .row, footer {
+    max-width: 900px;
+    margin: 0 auto;
   }
+
+  .nav-wrapper a {
+    transition: background .3s linear;
+  }
+
+  .nav-wrapper a:hover {
+    background-color: rgba(0,0,0,0.2);
+    /*background-color: red;*/
+
+
+  }
+
 
 
 }
