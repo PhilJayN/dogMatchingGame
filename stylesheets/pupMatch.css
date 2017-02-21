@@ -57,8 +57,25 @@ body {
   color: #75a5b0;
 }
 
+
+
+/*CONTENT-------------*/
+/*style for contents*/
+
+/*COLUMNS-------------*/
+.column-2 {
+  width: 50%;
+  float: left;
+}
+
+.column-2 img {
+  width: 100%;
+}
+
+
 .footer-wrapper {
   background-color: #d9d9a6;
+  clear: both;
 }
 
 
@@ -102,21 +119,12 @@ body {
 
 
 
+  /*CONTENT-------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  /*COLUMNS-------------*/
+  .column-6 {
+    width: 50%;
+    float: left;
 
 
 
