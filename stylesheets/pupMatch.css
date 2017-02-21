@@ -63,14 +63,27 @@ body {
 /*style for contents*/
 
 /*COLUMNS-------------*/
+
+.column-12, .column-6, .column-4, .column-3, .column-2 {
+   /*border: 1px solid blue;*/
+
+  padding: .25em 1%;
+  /*padding: .15em;*/
+
+}
 .column-2 {
   width: 50%;
   float: left;
 }
 
+/*prevent imgs from overflowing out of container div*/
 .column-2 img {
   width: 100%;
+  border-radius: 2px;
+  display: block;
 }
+
+
 
 
 .footer-wrapper {
@@ -116,6 +129,9 @@ body {
   }
 
 
+  .column-2 {
+    width: 33.33333333333334%;
+  }
 
 
 
@@ -146,10 +162,9 @@ body {
 
   .nav-wrapper a:hover {
     background-color: rgba(0,0,0,0.2);
-    /*background-color: red;*/
-
-
   }
+
+
 
 
 }
