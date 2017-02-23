@@ -139,18 +139,27 @@ body {
     display: none;
   }
   .primary-nav {
-    display: block!important;
+    /*display: block!important;*/
   }
   .nav-wrapper a {
     margin: .2em 0;
     padding: 1em 1.5em;
-    display: block;
-    text-decoration: none;
-    color: black;
+    /*display: block;*/
     border: 1px solid gray;
     font-size: 1.1em;
-    float: left;
+    /*float: left;*/
   }
+
+  li {
+    display: inline;
+    border: 1px solid red;
+  }
+
+  ul {
+     border: 1px solid blue;
+     text-align: center;
+  }
+
   .column-2 {
     width: 33.33333333333334%;
   }
