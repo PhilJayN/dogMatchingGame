@@ -135,22 +135,11 @@ body {
 /*TABLET rule kicks in when @ 641 and above*/
 
 @media only screen and (min-width: 641px) {
-  .primary-nav {
-    display: block!important;
-  }
   .hamburger-wrapper {
-    color: red;
     display: none;
   }
-  .nav-wrapper {
-    margin: 1em;
-  }
-  .nav-wrapper ul {
-    padding: 0;
-  }
-  .nav-wrapper li {
-    width: auto;
-    margin: 0;
+  .primary-nav {
+    display: block!important;
   }
   .nav-wrapper a {
     margin: .2em 0;
@@ -164,15 +153,17 @@ body {
   }
   .column-2 {
     width: 33.33333333333334%;
-    /*width: 25%;*/
   }
   /*CONTENT-------------*/
   /*COLUMNS-------------*/
-  .column-6 {
+  /*.column-6 {
     width: 50%;
     float: left;
-  }
-}
+  }*/
+
+} /*end of tablets*/
+
+
   /*or try breakpoint at 1141px */
   /*DESKTOP*/
   @media only screen and (min-width: 1140px) {
