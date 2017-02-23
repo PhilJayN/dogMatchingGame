@@ -190,7 +190,7 @@ body {
       transition: background .3s linear;
     }
     .nav-wrapper a:hover {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: #75a5b0;
     }
   }
   /* ----- OTHER STUFF ----*/
@@ -199,3 +199,8 @@ body {
     display: table;
     clear: both;
   }
+
+
+  /*.nav-wrapper a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }*/
