@@ -46,9 +46,9 @@ body {
   border-radius: 50%;
   display: block;
   margin: .50em auto;
-  -webkit-box-shadow: 3px 3px 6px 0px rgba(89, 89, 89, 0.6);
-  -moz-box-shadow: 3px 3px 6px 0px rgba(89, 89, 89, 0.6);
-  box-shadow: 3px 3px 6px 0px rgba(89, 89, 89, 0.6);
+  -webkit-box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
+  -moz-box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
+  box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
 }
 
 .nav-wrapper {
@@ -121,9 +121,14 @@ body {
 }
 
 .footer-wrapper {
-  background-color: #d9d9a6;
+  background-color: #d4d4b6;
   clear: both;
   padding: 1em;
+  margin-top: .85em;
+}
+
+.footer-wrapper a {
+  color: #3b6974;
 }
 
 
@@ -167,6 +172,7 @@ body {
     width: 50%;
     float: left;
   }
+}
   /*or try breakpoint at 1141px */
   /*DESKTOP*/
   @media only screen and (min-width: 1140px) {
