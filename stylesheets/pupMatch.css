@@ -21,7 +21,25 @@ body {
 }
 
 .header-wrapper {
-  /*background-color: #2d2c2c;*/
+  width: 85%;
+  margin: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.main-heading {
+   padding: .75em;
+}
+
+.site-logo {
+border-radius: 50%;
+ display: block;
+  margin: .50em auto;
+  -webkit-box-shadow: 3px 3px 6px 0px rgba(89,89,89,0.6);
+  -moz-box-shadow: 3px 3px 6px 0px rgba(89,89,89,0.6);
+  box-shadow: 3px 3px 6px 0px rgba(89,89,89,0.6);
 }
 
 .nav-wrapper {
