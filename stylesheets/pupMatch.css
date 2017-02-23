@@ -17,7 +17,8 @@ html {
 body {
   background-color: #fbfbfb;
   color: rgb(28, 27, 27);
-
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
 }
 
 .header-wrapper {
@@ -31,6 +32,8 @@ body {
 
 .main-heading {
    padding: .75em;
+   font-size: 1.75em;
+   font-family: 'Boogaloo', cursive;
 }
 
 .site-logo {
@@ -58,7 +61,6 @@ border-radius: 50%;
     width: 100%;
 }
 
-/*margin: .2em 0;*/
 .nav-wrapper a {
   padding: 1em 0;
   display: block;
@@ -67,9 +69,6 @@ border-radius: 50%;
   border-bottom: 1px solid #75a5b0;
 }
 
-/*nav ul li.active a {
-  background-color: #75a5b0;
-}*/
 
 .fa-bars {
   color: #75a5b0;
@@ -79,6 +78,10 @@ border-radius: 50%;
 
 /*CONTENT-------------*/
 /*style for contents*/
+.content-wrapper {
+  width: 93%;
+  margin: auto;
+}
 
 /*COLUMNS-------------*/
 
