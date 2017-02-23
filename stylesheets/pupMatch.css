@@ -138,9 +138,7 @@ body {
   .hamburger-wrapper {
     display: none;
   }
-  .primary-nav {
-    /*display: block!important;*/
-  }
+
   .nav-wrapper a {
     margin: .2em 0;
     padding: 1em 1.5em;
@@ -150,15 +148,28 @@ body {
     /*float: left;*/
   }
 
-  li {
-    display: inline;
-    border: 1px solid red;
+
+
+    .nav-wrapper a {
+      display: inline;
+      /*border-bottom: 1px solid #75a5b0;*/
+    }
+
+  .nav-wrapper {
+    width: 92.2%;
+    margin: auto;
+     /*border: 1px solid blue;*/
   }
 
-  ul {
-     border: 1px solid blue;
-     text-align: center;
+  .primary-nav {
+    margin-bottom: .85em;
   }
+
+  .nav-wrapper li {
+    display: inline;
+  }
+
+
 
   .column-2 {
     width: 33.33333333333334%;
