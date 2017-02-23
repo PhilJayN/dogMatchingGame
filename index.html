@@ -6,7 +6,7 @@
     <title>Puppy!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Boogaloo|Open+Sans:600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Boogaloo|Open+Sans:600|Padauk" rel="stylesheet">
     <link href="stylesheets/reset.css" rel="stylesheet">
     <link href="stylesheets/pupMatch.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/lightbox.css" rel="stylesheet">
@@ -26,7 +26,7 @@
         <header>
           <img src="images/logo-sm.jpg" alt="site logo" class="site-logo">
             <h1 class="center-text main-heading">Yorkshire Terrier</h1>
-            <h5 class="center-text">Loyalty and affection wrapped up in a bundle of cuteness</h5>
+            <h5 class="center-text secondary-heading">Loyalty and affection wrapped up in a bundle of cuteness</h5>
         </header>
     </div>
     <!--end of header-wrapper-->
@@ -45,8 +45,8 @@
         <nav>
             <ul class="clearfix primary-nav">
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="gallery.html">Pix</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="#picture-gallery">Picture Gallery</a></li>
+                <li><a href="#contact-site-creator">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -68,7 +68,7 @@
             </div>
             <!--end column-->
 
-            <div class="column-2">
+            <div class="column-2" id="picture-gallery">
                 <a href="images/yorkie/yorkie-bandage-768w.jpg" data-lightbox="yorkie-768w" data-title="I have a boo boo :(">
                     <img src="images/yorkieThumbs/yorkie-bandage-thumb.jpg" alt="Yorkie with a bandage on leg" />
                 </a>
@@ -124,13 +124,15 @@
 
         <footer>
             &copy 2017
-            <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-            <script type="text/javascript" src="js/pupMatch.js"></script>
-            <script src="js/lightbox.js"></script>
+          <a id="contact-site-creator" href="www.philjayn.com">Philip Nguyen
+          </a>
         </footer>
         <!--end of footer-wrapper-->
     </div>
 
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/pupMatch.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 
 </html>

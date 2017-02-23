@@ -17,8 +17,6 @@ html {
 body {
   background-color: #fbfbfb;
   color: rgb(28, 27, 27);
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.4;
 }
 
 .header-wrapper {
@@ -31,15 +29,20 @@ body {
 }
 
 .main-heading {
-   padding: .75em;
+   padding: .35em;
    font-size: 1.75em;
    font-family: 'Boogaloo', cursive;
+}
+
+.secondary-heading {
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 .site-logo {
 border-radius: 50%;
  display: block;
-  margin: .50em auto;
+  margin: .30em auto;
   -webkit-box-shadow: 3px 3px 6px 0px rgba(89,89,89,0.6);
   -moz-box-shadow: 3px 3px 6px 0px rgba(89,89,89,0.6);
   box-shadow: 3px 3px 6px 0px rgba(89,89,89,0.6);
@@ -81,14 +84,14 @@ border-radius: 50%;
 .content-wrapper {
   width: 93%;
   margin: auto;
+  font-family: 'Padauk', sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 /*COLUMNS-------------*/
 
 .column-12, .column-6, .column-4, .column-3, .column-2 {
-   /*border: 1px solid blue;*/
-
-  /*padding: .25em 1%;*/
   padding: 2px;
 
 }
@@ -105,11 +108,10 @@ border-radius: 50%;
 }
 
 
-
-
 .footer-wrapper {
   background-color: #d9d9a6;
   clear: both;
+  padding: 1em;
 }
 
 
