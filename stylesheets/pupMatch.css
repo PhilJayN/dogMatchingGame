@@ -139,37 +139,32 @@ body {
     display: none;
   }
 
-  .nav-wrapper a {
-    margin: .2em 0;
-    padding: 1em 1.5em;
-    /*display: block;*/
-    border: 1px solid gray;
-    font-size: 1.1em;
-    /*float: left;*/
-  }
-
-
-
-    .nav-wrapper a {
-      display: inline;
-      /*border-bottom: 1px solid #75a5b0;*/
-    }
-
   .nav-wrapper {
     width: 92.2%;
     margin: auto;
-     /*border: 1px solid blue;*/
+  }
+
+  .nav-wrapper ul {
+    /*border: 1px solid red;*/
+    text-align: center;
+  }
+    .nav-wrapper li {
+      display: inline;
+    }
+
+
+  .nav-wrapper a {
+    display: inline;
+    padding: 1em 1em;
+    border: 1px solid gray;
+    font-size: 1.1em;
+    /*border-bottom: 1px solid #75a5b0;*/
   }
 
   .primary-nav {
-    margin-bottom: .85em;
+    margin: 3em;
+    display: block!important;
   }
-
-  .nav-wrapper li {
-    display: inline;
-  }
-
-
 
   .column-2 {
     width: 33.33333333333334%;
