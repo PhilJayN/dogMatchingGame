@@ -1,17 +1,21 @@
-/*This is a mobile-first design. default will target mobile devices.
+  /*This is a mobile-first design. default will target mobile devices.
 Media queries will then target tablets and desktops*/
 
+
 /*-----prevents iPhone auto resizing in landscape mode -----*/
+
 html {
   -webkit-text-size-adjust: none;
   /*-ms-text-size-adjust: none;*/
 }
 
+
 /*apply natural box layout, solves problem with some browser padding and width*/
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -21,7 +25,7 @@ body {
 
 .header-wrapper {
   width: 85%;
-  margin: auto;
+  margin: 1em auto;
 }
 
 .center-text {
@@ -29,39 +33,42 @@ body {
 }
 
 .main-heading {
-   padding: .35em;
-   font-size: 1.75em;
-   font-family: 'Boogaloo', cursive;
+  padding: .35em;
+  font-size: 1.75em;
+  font-family: 'Boogaloo', cursive;
 }
 
 .secondary-heading {
-    font-family: 'Open Sans', sans-serif;
-
+  font-family: 'Open Sans', sans-serif;
 }
 
 .site-logo {
-border-radius: 50%;
- display: block;
-  margin: .30em auto;
-  -webkit-box-shadow: 3px 3px 6px 0px rgba(89,89,89,0.6);
-  -moz-box-shadow: 3px 3px 6px 0px rgba(89,89,89,0.6);
-  box-shadow: 3px 3px 6px 0px rgba(89,89,89,0.6);
+  border-radius: 50%;
+  display: block;
+  margin: .50em auto;
+  -webkit-box-shadow: 3px 3px 6px 0px rgba(89, 89, 89, 0.6);
+  -moz-box-shadow: 3px 3px 6px 0px rgba(89, 89, 89, 0.6);
+  box-shadow: 3px 3px 6px 0px rgba(89, 89, 89, 0.6);
 }
 
 .nav-wrapper {
-  margin: 1em;
+  width: 92.2%;
+  margin: auto;
+   /*border: 1px solid blue;*/
 }
 
 .hamburger-wrapper {
   cursor: pointer;
+  margin: 2.5em 0 .85em 0;
 }
 
 .primary-nav {
   display: none;
+  margin-bottom: .85em;
 }
 
 .nav-wrapper li {
-    width: 100%;
+  width: 100%;
 }
 
 .nav-wrapper a {
@@ -72,16 +79,19 @@ border-radius: 50%;
   border-bottom: 1px solid #75a5b0;
 }
 
-
 .fa-bars {
   color: #75a5b0;
 }
 
 
-
 /*CONTENT-------------*/
+
+
 /*style for contents*/
+
 .content-wrapper {
+ /*border: 1px solid blue;*/
+  overflow: auto;
   width: 93%;
   margin: auto;
   font-family: 'Padauk', sans-serif;
@@ -89,24 +99,26 @@ border-radius: 50%;
   line-height: 1.5;
 }
 
+
 /*COLUMNS-------------*/
 
-.column-12, .column-6, .column-4, .column-3, .column-2 {
+.column-2 {
   padding: 2px;
-
 }
+
 .column-2 {
   width: 50%;
   float: left;
 }
 
+
 /*prevent imgs from overflowing out of container div*/
+
 .column-2 img {
   width: 100%;
   border-radius: 2px;
   display: block;
 }
-
 
 .footer-wrapper {
   background-color: #d9d9a6;
@@ -116,30 +128,25 @@ border-radius: 50%;
 
 
 /*TABLET rule kicks in when @ 641 and above*/
-@media only screen and (min-width: 641px) {
 
+@media only screen and (min-width: 641px) {
   .primary-nav {
     display: block!important;
   }
-
   .hamburger-wrapper {
     color: red;
     display: none;
   }
-
   .nav-wrapper {
     margin: 1em;
   }
-
   .nav-wrapper ul {
     padding: 0;
   }
-
   .nav-wrapper li {
     width: auto;
     margin: 0;
   }
-
   .nav-wrapper a {
     margin: .2em 0;
     padding: 1em 1.5em;
@@ -150,54 +157,33 @@ border-radius: 50%;
     font-size: 1.1em;
     float: left;
   }
-
-
   .column-2 {
     width: 33.33333333333334%;
     /*width: 25%;*/
-
   }
-
-
-
   /*CONTENT-------------*/
-
   /*COLUMNS-------------*/
   .column-6 {
     width: 50%;
     float: left;
-
-
-
-}
-
-
-/*or try breakpoint at 1141px */
-/*DESKTOP*/
-@media only screen and (min-width: 1140px) {
-
-  header, nav, .row, footer {
-    max-width: 900px;
-    margin: 0 auto;
   }
-
-  .nav-wrapper a {
-    transition: background .3s linear;
+  /*or try breakpoint at 1141px */
+  /*DESKTOP*/
+  @media only screen and (min-width: 1140px) {
+    header, nav, .row, footer {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .nav-wrapper a {
+      transition: background .3s linear;
+    }
+    .nav-wrapper a:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   }
-
-  .nav-wrapper a:hover {
-    background-color: rgba(0,0,0,0.2);
+  /* ----- OTHER STUFF ----*/
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
   }
-
-
-
-
-}
-
-
-/* ----- OTHER STUFF ----*/
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
