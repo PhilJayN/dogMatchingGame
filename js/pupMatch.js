@@ -97,6 +97,7 @@ var app = {
                 $('.selected').each(function() {
                     $(this).removeClass('selected');
                 });
+                app.checkWin();
             } else {
               setTimeout(function(){
                 $('.selected').each(function(){
@@ -105,37 +106,15 @@ var app = {
               }, 1000);
             }
         }
+    },
+
+    checkWin: function () {
+      if ($('.unmatched').length === 0) {
+        console.log('you WIN!');
+      }
     }
 
 };
 
-//
-// checkMatch: function() {
-//      if ($('.selected').length === 2) {
-//        if ($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
-//          $('.selected').each(function() {
-//            $(this).animate({
-//              opacity: 0
-//            }).removeClass('unmatched');
-//          });
-//          $('.selected').each(function() {
-//            $(this).removeClass('selected');
-//          });
-//          app.checkWin();
-//        } else {
-//          setTimeout(function() {
-//            $('.selected').each(function() {
-//              $(this).html('').removeClass('selected');
-//            });
-//          }, 1000);
-//        }
-//      }
-//    },
-
-
-
-// console.log(app.init());
-// console.log(app.cards[10]);
-// console.log(app.shuffle());
 app.init();
 $(document).ready(main);
