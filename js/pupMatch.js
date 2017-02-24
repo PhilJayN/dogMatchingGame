@@ -97,6 +97,12 @@ var app = {
                 $('.selected').each(function() {
                     $(this).removeClass('selected');
                 });
+            } else {
+              setTimeout(function(){
+                $('.selected').each(function(){
+                  $(this).html("").removeClass('selected');
+                });
+              }, 1000);
             }
         }
     }
