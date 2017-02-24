@@ -132,6 +132,12 @@ body {
 }
 
 
+/*PUPPY GAME START*/
+.game-wrapper {
+   border: 1px solid blue;
+    
+}
+
 /*TABLET rule kicks in when @ 641 and above*/
 
 @media only screen and (min-width: 641px) {

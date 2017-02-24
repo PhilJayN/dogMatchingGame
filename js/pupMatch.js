@@ -1,67 +1,78 @@
-var main = function () {
+var main = function() {
 
-  // var $showNavBtn = $(".hamburger-btn");
-  var $primaryNav = $(".primary-nav");
-  var $hamburgerWrapper = $(".hamburger-wrapper");
-  var $menuTxt = $(".menu-txt");
+    // var $showNavBtn = $(".hamburger-btn");
+    var $primaryNav = $(".primary-nav");
+    var $hamburgerWrapper = $(".hamburger-wrapper");
+    var $menuTxt = $(".menu-txt");
 
-  $hamburgerWrapper.on("click", function() {
-    console.log('click');
-    $primaryNav.slideToggle("normal", function() {
-      if ($primaryNav.is(":visible") ) {
-          $menuTxt.text("Hide Menu");
-      }
-      else {
-        $menuTxt.text("Show Menu");
-      }
+    $hamburgerWrapper.on("click", function() {
+        console.log('click');
+        $primaryNav.slideToggle("normal", function() {
+            if ($primaryNav.is(":visible")) {
+                $menuTxt.text("Hide Menu");
+            } else {
+                $menuTxt.text("Show Menu");
+            }
+        });
     });
-  });
 
 };
 
 
-
-
 var app = {
-  cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
-  init: function() {
-    // this.test();
-    this.shuffle();
-  },
+    cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
+    init: function() {
+        this.shuffle();
+    },
 
-  test: function() {
-    console.log('test method running!');
-  },
+    test: function() {
+        console.log('test method running!');
+    },
 
-  randomNum: function() {
-    var random = 0;     //set this to just undefined instead?
-    for (var i = 2; i <=3; i++) {
-      console.log(i);
+    displayShuffled: function() {
+        console.log('shuffled', this.cards);
+    },
+
+    randomNum: function() {
+        var random = 0; //set this to just undefined instead?
+        for (var i = 2; i <= 3; i++) {
+            console.log(i);
+        }
+    },
+
+    shuffle: function() {
+        //returns a shuffled cards array. Then put each item of arr into div
+        // with class of cards
+        var random = 0;
+        var temp = 0;
+        // var arrTest = [];
+        var cardsArrLen = this.cards.length;
+        // console.log('cards arr len', this.cards.length);
+        for (var i = 1; i < cardsArrLen; i++) {
+            random = Math.round(Math.random() * i);
+            // console.log('random', random);
+            // arrTest.push(random);
+            temp = this.cards[i];
+            this.cards[i] = this.cards[random];
+            this.cards[random] = temp;
+        }
+        this.displayShuffled();
+        // console.log('arrTest', arrTest);
+    },
+
+    assignCards: function() {
+      $('.card').each(function(index){
+        // console.log('this', this);
+        // console.log('each fxn index', index);
+        console.log('test', app.cards[0]); //do not use this.cards[]. it refers
+        //to the div class of card.
+        $(this).attr('data-card-value', app.cards[index]);
+      });
     }
-  },
 
-  shuffle: function() {
-    var random = 0;
-    var temp = 0;
-    // console.log('cards arr length', this.cards.length);
-    debugger;
-    for (var i = 1; i < this.cards.length; i++) {
-      random = Math.round(Math.random() * i);
-      console.log('random', random);
-    }
-    // return random;
 
-  }
 
-    // var random = 0;
-    // var temp = 0;
-    // for (i = 1; i < cards.length; i++) {
-    //   random = Math.round(Math.random() * i);
-    // }
-    // console.log('Math.random() = ', Math.random());
-    // console.log('Math.random() * ', i, Math.random());
 
-  // console.log(cards);
 
 };
 
@@ -69,10 +80,6 @@ var app = {
 // console.log(app.init());
 // console.log(app.cards[10]);
 // console.log(app.shuffle());
-
-
 app.test();
-
-
 
 $(document).ready(main);
