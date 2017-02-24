@@ -91,6 +91,7 @@ body {
 
 .content-wrapper {
  /*border: 1px solid blue;*/
+ display: none;
   overflow: auto;
   width: 93%;
   margin: auto;
