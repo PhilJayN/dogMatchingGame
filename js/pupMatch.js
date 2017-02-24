@@ -85,18 +85,10 @@ var app = {
         $('.card').on('click', function() {
             console.log('click');
             // $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
-            $(this).attr('src', $(this).data('cardValue'));
+            $(this).attr('src', $(this).data('cardValue')).addClass('selected');
             app.checkMatch();
         });
     },
-
-    // clickHandlers: function() {
-    //     $('.card').on('click', function() {
-    //         console.log('click');
-    //         $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
-    //         app.checkMatch();
-    //     });
-    // },
 
     checkMatch: function() {
       console.log('checkMatch running');
@@ -116,7 +108,7 @@ var app = {
             } else {
               setTimeout(function(){
                 $('.selected').each(function(){
-                  $(this).html("").removeClass('selected');
+                  $(this).attr('src', "").removeClass('selected');
                 });
               }, 1000);
             }
