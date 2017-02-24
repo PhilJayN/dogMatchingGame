@@ -1,3 +1,4 @@
+
 var main = function() {
 
     // var $showNavBtn = $(".hamburger-btn");
@@ -18,9 +19,12 @@ var main = function() {
 
 };
 
-
 var app = {
-    cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
+    // cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
+    cards: ["images/gamePics/yorkie-bandage-thumb.jpg", "images/gamePics/yorkie-bandage-thumb.jpg",
+     "images/gamePics/yorkie-in-bed-thumb.jpg",
+     "images/gamePics/yorkie-in-bed-thumb.jpg"],
+
     init: function() {
         this.shuffle();
         console.log('jQuery ', $('.hello').length);
@@ -70,7 +74,9 @@ var app = {
             // console.log('each fxn index', index);
             // console.log('test', app.cards[0]); //do not use this.cards[]. it refers
             //to the div class of card.
-            $(this).attr('data-card-value', app.cards[index]);
+            // $(this).attr('data-card-value', app.cards[index]);
+            $(this).attr('src', app.cards[index]);
+
         });
         this.clickHandlers();
     },
@@ -78,10 +84,18 @@ var app = {
     clickHandlers: function() {
         $('.card').on('click', function() {
             console.log('click');
-            $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
+    $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
             app.checkMatch();
         });
     },
+
+    // clickHandlers: function() {
+    //     $('.card').on('click', function() {
+    //         console.log('click');
+    //         $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
+    //         app.checkMatch();
+    //     });
+    // },
 
     checkMatch: function() {
       console.log('checkMatch running');
@@ -117,4 +131,5 @@ var app = {
 };
 
 app.init();
+console.log('cards len', app.cards.length);
 $(document).ready(main);
