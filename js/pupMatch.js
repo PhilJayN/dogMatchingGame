@@ -74,8 +74,8 @@ var app = {
             // console.log('each fxn index', index);
             // console.log('test', app.cards[0]); //do not use this.cards[]. it refers
             //to the div class of card.
-            // $(this).attr('data-card-value', app.cards[index]);
-            $(this).attr('src', app.cards[index]);
+            $(this).attr('data-card-value', app.cards[index]);
+            // $(this).attr('src', app.cards[index]);
 
         });
         this.clickHandlers();
@@ -84,7 +84,8 @@ var app = {
     clickHandlers: function() {
         $('.card').on('click', function() {
             console.log('click');
-    $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
+            // $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
+            $(this).attr('src', $(this).data('cardValue'));
             app.checkMatch();
         });
     },
