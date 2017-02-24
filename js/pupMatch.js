@@ -25,9 +25,11 @@ var app = {
         this.shuffle();
     },
 
+
     test: function() {
         console.log('test method running!');
     },
+
 
     displayShuffled: function() {
         console.log('shuffled', this.cards);
@@ -57,6 +59,7 @@ var app = {
             this.cards[random] = temp;
         }
         this.displayShuffled();
+        this.assignCards();
         // console.log('arrTest', arrTest);
     },
 
@@ -68,11 +71,15 @@ var app = {
         //to the div class of card.
         $(this).attr('data-card-value', app.cards[index]);
       });
+      this.clickHandlers();
+    },
+
+    clickHandlers: function() {
+      $('.card').on('click', function(){
+        console.log('click');
+          $(this).html('<p> hello</p>');
+      });
     }
-
-
-
-
 
 };
 
@@ -80,6 +87,5 @@ var app = {
 // console.log(app.init());
 // console.log(app.cards[10]);
 // console.log(app.shuffle());
-app.test();
-
+app.init();
 $(document).ready(main);

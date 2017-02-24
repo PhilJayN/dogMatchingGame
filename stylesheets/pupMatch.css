@@ -135,7 +135,13 @@ body {
 /*PUPPY GAME START*/
 .game-wrapper {
    border: 1px solid blue;
-    
+}
+
+.card {
+   border: 1px solid blue;
+   width: 30px;
+   height: 30px;
+   float: left;
 }
 
 /*TABLET rule kicks in when @ 641 and above*/
