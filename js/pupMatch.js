@@ -21,9 +21,9 @@ var main = function() {
 
 var app = {
     // cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
-    cards: ["images/gamePics/yorkie-bandage-thumb.jpg", "images/gamePics/yorkie-bandage-thumb.jpg",
-     "images/gamePics/yorkie-in-bed-thumb.jpg",
-     "images/gamePics/yorkie-in-bed-thumb.jpg"],
+    cards: ["images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
+     "images/gamePics/yorkie-driving.jpg","images/gamePics/yorkie-next-to-flowers.jpg",
+"images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sleeping.jpg"],
 
     init: function() {
         this.shuffle();
@@ -110,7 +110,7 @@ var app = {
                 $('.selected').each(function(){
                   $(this).attr('src', "").removeClass('selected');
                 });
-              }, 6000);
+              }, 1000);
             }
         }
     },
