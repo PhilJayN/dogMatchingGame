@@ -110,7 +110,7 @@ var app = {
                 $('.selected').each(function(){
                   $(this).attr('src', "").removeClass('selected');
                 });
-              }, 1000);
+              }, 6000);
             }
         }
     },
