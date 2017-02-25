@@ -114,27 +114,57 @@ color: #42A5F5;
 
 
 /*PUPPY GAME START*/
+/*.play-game-wrapper {
+   border: 1px solid blue;
+   margin: auto;
+   width: 300px;
+}*/
 
 .play-game-btn {
-
+  border: none;
+  border: 1px solid red;
+  border-radius: 2px;
+  outline: none;
   background-color: #4285f4;
   color: #fff;
-
-}
-
-
-.play-game-btn {
-  text-align:center;
-  padding: 1em 3em;
-  color: white;
+  /*text-align:center;*/
+  padding: .85em 1.85em;
   transition: 300ms ease-in-out;
-  box-shadow: 0px 4px 20px #ccc;
-  margin: 50px 2.6%;
+  /*box-shadow: 0px 4px 20px #ccc;*/
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.225);
+  /*margin: .75em;*/
+  display: inline-block;
+  text-align: center;
+}
+
+button {
+   border: 1px solid blue;
+   display: block;
+  /*margin: auto;*/
 }
 
 
+h1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  /*text-align: center;*/
+  border: 1px solid blue;
 
+}
 
+h2, h3 {
+   border: 1px solid blue;
+text-align: center;
+}
+
+p {
+  border: 1px solid blue;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
 
 .card {
    /*border: 1px solid blue;*/
@@ -264,8 +294,3 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     display: table;
     clear: both;
   }
-
-
-  /*.nav-wrapper a:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-  }*/
