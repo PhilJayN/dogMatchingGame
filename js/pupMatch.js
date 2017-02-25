@@ -1,9 +1,10 @@
 var main = function() {
 
   var handlers = {
-    
+
     init: function () {
       this.hamburgerHandlers();
+      this.gameHandlers();
     },
 
     hamburgerHandlers: function() {
@@ -18,6 +19,23 @@ var main = function() {
                   $menuTxt.text("Hide Menu");
               } else {
                   $menuTxt.text("Show Menu");
+              }
+          });
+      });
+    },
+
+    gameHandlers: function() {
+      var $playGameBtn = $(".play-game-btn");
+      var $column1 = $(".column-1");
+      // var $menuTxt = $(".menu-txt");
+
+      $playGameBtn.on("click", function() {
+          console.log('click play game');
+          $column1.slideToggle("normal", function() {
+              if ($column1.is(":visible")) {
+                  $playGameBtn.text("Hide Game");
+              } else {
+                  $playGameBtn.text("Play Game");
               }
           });
       });
