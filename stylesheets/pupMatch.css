@@ -21,6 +21,8 @@ html {
 body {
   background-color: #fbfbfb;
   color: rgb(28, 27, 27);
+  /*background-color: black;*/
+
 }
 
 .header-wrapper {
@@ -114,13 +116,23 @@ body {
 }
 
 .column-1 {
-  width: 33.3333330%;
+  width: 33.333330%;
   float: left;
+   /*border: 1px solid blue;*/
+    padding: .70em;
 }
 
 .column-1 img {
   width: 100%;
-  border-radius: 2px;
+  border-radius: 3px;
+
+
+  -webkit-box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
+  -moz-box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
+  box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
+
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
 }
 
 
@@ -134,7 +146,7 @@ body {
 
 .column-2 img {
   width: 100%;
-  border-radius: 2px;
+  border-radius: 3px;
   display: block;
 }
 

@@ -119,7 +119,7 @@ var app = {
             } else {
                 setTimeout(function() {
                     $('.selected').each(function() {
-                        $(this).attr('src', "images/gamePics/game-main-blur.jpg").removeClass('selected');
+                        $(this).attr('src', "images/gamePics/red-sky-blurred.jpg").removeClass('selected');
                         // $(this).removeClass('selected');
                     });
                 }, 1000);
