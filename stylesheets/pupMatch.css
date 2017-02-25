@@ -90,7 +90,7 @@ body {
 /*style for contents*/
 
 .content-wrapper {
- border: 1px solid blue;
+ /*border: 1px solid blue;*/
  /*display: none;*/
   overflow: auto;
   width: 93%;
@@ -107,7 +107,7 @@ body {
 /*PUPPY GAME START*/
 
 .card {
-   border: 1px solid blue;
+   /*border: 1px solid blue;*/
    /*width: 230px;
    height: 200px;*/
    float: left;

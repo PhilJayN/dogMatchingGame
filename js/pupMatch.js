@@ -1,4 +1,3 @@
-
 var main = function() {
 
     // var $showNavBtn = $(".hamburger-btn");
@@ -21,9 +20,21 @@ var main = function() {
 
 var app = {
     // cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
-    cards: ["images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
-     "images/gamePics/yorkie-driving.jpg","images/gamePics/yorkie-next-to-flowers.jpg",
-"images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sleeping.jpg"],
+    cards: [
+        "images/gamePics/yorkie-beach-footprints.jpg",
+        "images/gamePics/yorkie-beach-footprints.jpg",
+        "images/gamePics/yorkie-clothes-shoes.jpg",
+        "images/gamePics/yorkie-clothes-shoes.jpg",
+        "images/gamePics/yorkie-driving.jpg",
+        "images/gamePics/yorkie-driving.jpg",
+        "images/gamePics/yorkie-next-to-flowers.jpg",
+        "images/gamePics/yorkie-next-to-flowers.jpg",
+        "images/gamePics/yorkie-sitting.jpg",
+        "images/gamePics/yorkie-sitting.jpg",
+        "images/gamePics/yorkie-sleeping.jpg",
+        "images/gamePics/yorkie-sleeping.jpg"
+    ],
+
 
     init: function() {
         this.shuffle();
@@ -91,34 +102,36 @@ var app = {
     },
 
     checkMatch: function() {
-      console.log('checkMatch running');
-      console.log('true or false',$('.selected').length == 2 );
+        console.log('checkMatch running');
+        console.log('true or false', $('.selected').length == 2);
         if ($('.selected').length == 2) {
-          // console.log('testing match', $('.selected').first().data('cardValue') == $('.selected').last().data('cardValue'));
+            // console.log('testing match', $('.selected').first().data('cardValue') == $('.selected').last().data('cardValue'));
             if ($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
                 $('.selected').each(function() {
-                  $(this).animate({
-                    opacity: 0
-                  }).removeClass('unmatched');
+                    $(this).animate({
+                        opacity: 0
+                    }).removeClass('unmatched');
                 });
                 $('.selected').each(function() {
                     $(this).removeClass('selected');
                 });
                 app.checkWin();
             } else {
-              setTimeout(function(){
-                $('.selected').each(function(){
-                  $(this).attr('src', "").removeClass('selected');
-                });
-              }, 1000);
+                setTimeout(function() {
+                    $('.selected').each(function() {
+                        $(this).attr('src', "images/gamePics/game-main-blur.jpg").removeClass('selected');
+                        // $(this).removeClass('selected');
+                    });
+                }, 1000);
+                console.log('hello there!');
             }
         }
     },
 
-    checkWin: function () {
-      if ($('.unmatched').length === 0) {
-        console.log('you WIN!');
-      }
+    checkWin: function() {
+        if ($('.unmatched').length === 0) {
+            console.log('you WIN!');
+        }
     }
 
 };
