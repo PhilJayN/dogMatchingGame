@@ -1,20 +1,30 @@
 var main = function() {
 
-    // var $showNavBtn = $(".hamburger-btn");
-    var $primaryNav = $(".primary-nav");
-    var $hamburgerWrapper = $(".hamburger-wrapper");
-    var $menuTxt = $(".menu-txt");
+  var handlers = {
+    
+    init: function () {
+      this.hamburgerHandlers();
+    },
 
-    $hamburgerWrapper.on("click", function() {
-        console.log('click');
-        $primaryNav.slideToggle("normal", function() {
-            if ($primaryNav.is(":visible")) {
-                $menuTxt.text("Hide Menu");
-            } else {
-                $menuTxt.text("Show Menu");
-            }
-        });
-    });
+    hamburgerHandlers: function() {
+      var $primaryNav = $(".primary-nav");
+      var $hamburgerWrapper = $(".hamburger-wrapper");
+      var $menuTxt = $(".menu-txt");
+
+      $hamburgerWrapper.on("click", function() {
+          console.log('click');
+          $primaryNav.slideToggle("normal", function() {
+              if ($primaryNav.is(":visible")) {
+                  $menuTxt.text("Hide Menu");
+              } else {
+                  $menuTxt.text("Show Menu");
+              }
+          });
+      });
+    }
+
+};
+handlers.init();
 
 };
 
@@ -139,3 +149,11 @@ var app = {
 app.init();
 console.log('cards len', app.cards.length);
 $(document).ready(main);
+
+
+
+
+// var $showNavBtn = $(".hamburger-btn");
+// $primaryNav: $(".primary-nav"),
+// $hamburgerWrapper: $(".hamburger-wrapper"),
+// $menuTxt: $(".menu-txt"),
