@@ -114,11 +114,13 @@ color: #42A5F5;
 
 
 /*PUPPY GAME START*/
-/*.game-wrapper {
-   border: 1px solid blue;
+.game-wrapper {
+  display: none;
+   /*border: 1px solid blue;*/
    margin: auto;
-   width: 300px;
-}*/
+}
+
+
 
 .play-game-btn {
   border: none;
@@ -152,7 +154,7 @@ color: #42A5F5;
 }
 
 .column-1 {
-  display: none;
+  /*display: none;*/
   width: 33.333330%;
   float: left;
    /*border: 1px solid blue;*/

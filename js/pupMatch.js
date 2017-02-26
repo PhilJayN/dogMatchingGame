@@ -26,13 +26,15 @@ var main = function() {
 
     gameHandlers: function() {
       var $playGameBtn = $(".play-game-btn");
-      var $column1 = $(".column-1");
+      var $gameWrapper = $(".game-wrapper");
+
+      // var $column1 = $(".column-1");
       // var $menuTxt = $(".menu-txt");
 
       $playGameBtn.on("click", function() {
           console.log('click play game');
-          $column1.slideToggle("normal", function() {
-              if ($column1.is(":visible")) {
+          $gameWrapper.slideToggle("normal", function() {
+              if ($gameWrapper.is(":visible")) {
                   $playGameBtn.text("Hide Game");
               } else {
                   $playGameBtn.text("Play Game");
