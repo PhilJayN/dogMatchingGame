@@ -1,79 +1,65 @@
 // var main = function() {
 
-    var handlers = {
+var handlers = {
 
-        init: function() {
-            this.hamburgerHandlers();
-            this.gameHandlers();
-        },
+    init: function() {
+        this.hamburgerHandlers();
+        this.gameHandlers();
+    },
 
-        hamburgerHandlers: function() {
-            var $primaryNav = $(".primary-nav");
-            var $hamburgerWrapper = $(".hamburger-wrapper");
-            var $menuTxt = $(".menu-txt");
+    hamburgerHandlers: function() {
+        var $primaryNav = $(".primary-nav");
+        var $hamburgerWrapper = $(".hamburger-wrapper");
+        var $menuTxt = $(".menu-txt");
 
-            $hamburgerWrapper.on("click", function() {
-                console.log('click');
-                $primaryNav.slideToggle("normal", function() {
-                    if ($primaryNav.is(":visible")) {
-                        $menuTxt.text("Hide Menu");
-                    } else {
-                        $menuTxt.text("Show Menu");
-                    }
-                });
+        $hamburgerWrapper.on("click", function() {
+            console.log('click');
+            $primaryNav.slideToggle("normal", function() {
+                if ($primaryNav.is(":visible")) {
+                    $menuTxt.text("Hide Menu");
+                } else {
+                    $menuTxt.text("Show Menu");
+                }
             });
-        },
+        });
+    },
 
-        gameHandlers: function() {
-            var $playGameBtn = $(".play-game-btn");
-            var $gameWrapper = $(".game-wrapper");
+    gameHandlers: function() {
+        var $playGameBtn = $(".play-game-btn");
+        var $gameWrapper = $(".game-wrapper");
 
-            // var $column1 = $(".column-1");
-            // var $menuTxt = $(".menu-txt");
-
-            $playGameBtn.on("click", function() {
-                console.log('click play game');
-                $gameWrapper.slideToggle("normal", function() {
-                    if ($gameWrapper.is(":visible")) {
-                        $playGameBtn.text("Hide Game");
-                    } else {
-                        $playGameBtn.text("Play Game");
-                    }
-                });
+        $playGameBtn.on("click", function() {
+            console.log('click play game');
+            $gameWrapper.slideToggle("normal", function() {
+                if ($gameWrapper.is(":visible")) {
+                    $playGameBtn.text("Hide Game");
+                } else {
+                    $playGameBtn.text("Play Game");
+                }
             });
-        }
+        });
+    }
 
-    };
-    handlers.init();
+};
+handlers.init();
 
 var app = {
     // cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
     cards: [
-        "images/gamePics/yorkie-beach-footprints.jpg",
-        "images/gamePics/yorkie-beach-footprints.jpg",
-        "images/gamePics/yorkie-clothes-shoes.jpg",
-        "images/gamePics/yorkie-clothes-shoes.jpg",
-        "images/gamePics/yorkie-driving.jpg",
-        "images/gamePics/yorkie-driving.jpg",
-        "images/gamePics/yorkie-next-to-flowers.jpg",
-        "images/gamePics/yorkie-next-to-flowers.jpg",
-        "images/gamePics/yorkie-sitting.jpg",
-        "images/gamePics/yorkie-sitting.jpg",
-        "images/gamePics/yorkie-sleeping.jpg",
-        "images/gamePics/yorkie-sleeping.jpg"
+        "images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-beach-footprints.jpg",
+        "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
+        "images/gamePics/yorkie-driving.jpg", "images/gamePics/yorkie-driving.jpg",
+        "images/gamePics/yorkie-next-to-flowers.jpg", "images/gamePics/yorkie-next-to-flowers.jpg",
+        "images/gamePics/yorkie-sitting.jpg","images/gamePics/yorkie-sitting.jpg",
+        "images/gamePics/yorkie-sleeping.jpg","images/gamePics/yorkie-sleeping.jpg"
     ],
 
     init: function() {
         this.shuffle();
     },
 
-    displayShuffled: function() {
-        console.log('shuffled', this.cards);
-    },
-
     shuffle: function() {
-        //returns a shuffled cards array. Then put each item of arr into div
-        // with class of cards
+        //returns a shuffled cards array, & put each arr item into div with class of cards
         var random = 0;
         var temp = 0;
         var cardsArrLen = this.cards.length;
@@ -88,19 +74,21 @@ var app = {
     },
 
     assignCards: function() {
-        $('.card').each(function(index) {
-            console.log('this', this);
-            // console.log('test', app.cards[0]); //do not use this.cards[]. it refers
-            //to the div class of card.
+      var $card = $('.card');
+        $card.each(function(index) {
             $(this).attr('data-card-value', app.cards[index]);
         });
         this.clickHandlers();
     },
 
+    displayShuffled: function() {
+        console.log('shuffled', this.cards);
+    },
+
     clickHandlers: function() {
-        $('.card').on('click', function() {
+      var $card = $('.card');
+        $card.on('click', function() {
             console.log('click');
-            // $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
             $(this).attr('src', $(this).data('cardValue')).addClass('selected');
             app.checkMatch();
         });
@@ -108,7 +96,6 @@ var app = {
 
     checkMatch: function() {
         console.log('checkMatch running');
-
         // console.log('true or false', $('.selected').length == 2);
         if ($('.selected').length == 2) {
             console.log('this', this);
@@ -124,14 +111,11 @@ var app = {
                 });
                 app.checkWin();
                 // setTimeout(function(){ alert("Hello"); }, 3000);
-                // setTimeout(function(){ app.checkWin(); }, 3000);
                 // setTimeout(function(){ alert('waited 3 secs!'); }, 3000);
-
             } else {
                 setTimeout(function() {
                     $('.selected').each(function() {
                         $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
-                        // $(this).removeClass('selected');
                     });
                 }, 1000);
             }
@@ -172,7 +156,6 @@ var app = {
 };
 
 app.init();
-// console.log('cards len', app.cards.length);
 
 //}; //end of main function
 
