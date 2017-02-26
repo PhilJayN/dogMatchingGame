@@ -145,9 +145,10 @@ var app = {
                 $('.selected').each(function() {
                     $(this).removeClass('selected');
                 });
-                // setTimeout(
-                  app.checkWin();
-                // });
+                // setTimeout(function(){ alert("Hello"); }, 3000);
+                // setTimeout(function(){ app.checkWin(); }, 3000);
+                setTimeout(function(){ alert('waited 3 secs!'); }, 3000);
+
             } else {
                 setTimeout(function() {
                     $('.selected').each(function() {
@@ -172,8 +173,9 @@ var app = {
         }
     },
 
+    ///bug: does not clear the last two pics.
     resetGame: function() {
-
+      app.init();
     }
 
 };
