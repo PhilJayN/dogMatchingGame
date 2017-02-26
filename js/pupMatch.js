@@ -96,22 +96,21 @@ var app = {
     },
 
     checkMatch: function() {
-        if ($('.selected').length == 2) {
-            if ($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
-                $('.selected').each(function() {
+      var $selected = $('.selected');
+        if ($selected.length === 2) {
+            if ($selected.first().data('cardValue') === $selected.last().data('cardValue')) {
+                $selected.each(function() {
                     $(this).animate({
                         opacity: 0
                     }).removeClass('unmatched');
                 });
-                $('.selected').each(function() {
+                $selected.each(function() {
                     $(this).removeClass('selected');
                 });
                 app.checkWin();
-                // setTimeout(function(){ alert("Hello"); }, 3000);
-                // setTimeout(function(){ alert('waited 3 secs!'); }, 3000);
             } else {
                 setTimeout(function() {
-                    $('.selected').each(function() {
+                    $selected.each(function() {
                         $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
                     });
                 }, 1000);
