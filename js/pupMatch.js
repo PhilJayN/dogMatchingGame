@@ -111,7 +111,7 @@ var app = {
 
     assignCards: function() {
         $('.card').each(function(index) {
-            // console.log('this', this);
+            console.log('this', this);
             // console.log('each fxn index', index);
             // console.log('test', app.cards[0]); //do not use this.cards[]. it refers
             //to the div class of card.
@@ -133,8 +133,10 @@ var app = {
 
     checkMatch: function() {
         console.log('checkMatch running');
-        console.log('true or false', $('.selected').length == 2);
+
+        // console.log('true or false', $('.selected').length == 2);
         if ($('.selected').length == 2) {
+          console.log('this', this);
             // console.log('testing match', $('.selected').first().data('cardValue') == $('.selected').last().data('cardValue'));
             if ($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
                 $('.selected').each(function() {
@@ -145,9 +147,10 @@ var app = {
                 $('.selected').each(function() {
                     $(this).removeClass('selected');
                 });
+                app.checkWin();
                 // setTimeout(function(){ alert("Hello"); }, 3000);
                 // setTimeout(function(){ app.checkWin(); }, 3000);
-                setTimeout(function(){ alert('waited 3 secs!'); }, 3000);
+                // setTimeout(function(){ alert('waited 3 secs!'); }, 3000);
 
             } else {
                 setTimeout(function() {
@@ -156,7 +159,6 @@ var app = {
                         // $(this).removeClass('selected');
                     });
                 }, 1000);
-                console.log('hello there!');
             }
         }
     },
@@ -175,6 +177,37 @@ var app = {
 
     ///bug: does not clear the last two pics.
     resetGame: function() {
+      console.log('resetGame method running');
+      //reset images back to blue-gradient source
+
+      // var $imagesEl = $('.board-wrapper img');
+      // console.log($imagesEl);
+      // // $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
+      // $imagesEl.attr('src', "images/gamePics/blue-gradient.jpg");
+
+      // $imagesEl.animate({
+      //     opacity: 100
+      // });
+
+      // var $cards = $('.cards');
+      // $cards.each(function () {
+      //   $(this).attr('src', "images/gamePics/yorkie-sitting.jpg");
+      //   $(this).attr('data-test-here', 'test data val');
+      // });
+
+
+      $('.card').each(function(index) {
+          $(this).attr('data-card-test', 'test data val');
+            $(this).attr('src', "images/gamePics/blue-gradient.jpg").animate({
+                opacity: 100
+            });
+
+          // $(this).attr('src', app.cards[index]);
+          console.log('this after resetGame method running:', this);
+
+      });
+      this.clickHandlers();
+
       app.init();
     }
 
