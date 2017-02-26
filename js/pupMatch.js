@@ -65,17 +65,9 @@ var app = {
         "images/gamePics/yorkie-sleeping.jpg"
     ],
 
-
     init: function() {
         this.shuffle();
-        // console.log('jQuery ', $('.hello').length);
     },
-
-
-    test: function() {
-        console.log('test method running!');
-    },
-
 
     displayShuffled: function() {
         console.log('shuffled', this.cards);
@@ -179,42 +171,25 @@ var app = {
     resetGame: function() {
       console.log('resetGame method running');
       //reset images back to blue-gradient source
-
-      // var $imagesEl = $('.board-wrapper img');
-      // console.log($imagesEl);
-      // // $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
-      // $imagesEl.attr('src', "images/gamePics/blue-gradient.jpg");
-
-      // $imagesEl.animate({
-      //     opacity: 100
-      // });
-
-      // var $cards = $('.cards');
-      // $cards.each(function () {
-      //   $(this).attr('src', "images/gamePics/yorkie-sitting.jpg");
-      //   $(this).attr('data-test-here', 'test data val');
-      // });
-
-
-      $('.card').each(function(index) {
-          $(this).attr('data-card-test', 'test data val');
+      var $card = $('.card');
+      $card.each(function() {
             $(this).attr('src', "images/gamePics/blue-gradient.jpg").animate({
                 opacity: 100
             });
-
-          // $(this).attr('src', app.cards[index]);
-          console.log('this after resetGame method running:', this);
+          console.log('this keyword after resetGame method running:', this);
 
       });
+
+      app.shuffle();
+
       this.clickHandlers();
 
-      app.init();
     }
 
 };
 
 app.init();
-console.log('cards len', app.cards.length);
+// console.log('cards len', app.cards.length);
 $(document).ready(main);
 
 
