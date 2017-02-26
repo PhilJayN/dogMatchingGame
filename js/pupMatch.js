@@ -148,9 +148,17 @@ var app = {
         //     $(this).removeClass('selected');
         // });
 
+        // $selected.each(function() {
+        //     $(this).animate({
+        //         opacity: 0
+        //     }).removeClass('unmatched');
+        // });
+
         $('.card').each(function() {
           //add back opacity:
-            $(this).attr('src', "images/gamePics/flower-blurred.jpg");
+            $(this).attr('src', "images/gamePics/flower-blurred.jpg").animate({
+                    opacity: 100
+                });
             $(this).removeAttr('data-card-value');
 
             // $(this).removeClass('selected');
