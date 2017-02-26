@@ -45,6 +45,7 @@ handlers.init();
 
 var app = {
     // cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
+
     cards: [
         "images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-beach-footprints.jpg",
         "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
@@ -54,12 +55,8 @@ var app = {
         "images/gamePics/yorkie-sleeping.jpg", "images/gamePics/yorkie-sleeping.jpg"
     ],
 
-    init: function() {
-        this.shuffle();
-    },
-
+    //returns a shuffled cards array
     shuffle: function() {
-        //returns a shuffled cards array, & put each arr item into div with class of cards
         var random = 0;
         var temp = 0;
         var cardsArrLen = this.cards.length;
@@ -73,45 +70,33 @@ var app = {
         this.assignData();
     },
 
-
     displayShuffled: function() {
-        console.log('shuffled', this.cards);
+        console.log('shuffled cards: ', this.cards);
     },
 
+    // assign each img a data- value frm cards arr
     assignData: function() {
-        var $card = $('.card');
+      var $card = $('.card');
         $card.each(function(index) {
             $(this).attr('data-card-value', app.cards[index]);
         });
         this.clickHandlers();
     },
 
-    // changeSrc: function () {
-    //   var $card = $('.card');
-    //     $card.each( function(index) {
-    //         $(this).attr('src', $(this).data('cardValue')).addClass('selected');
-    //     });
-    //   // $(this).attr('src', $(this).data('cardValue')).addClass('selected');
-    // },
-
-    //changes the img src of clicked element using data from shuffled cards.
+    //changes the img src of clicked element using data-card-value
     //then Adds class selected to the element clicked.
     clickHandlers: function() {
         var $card = $('.card');
         $card.on('click', function() {
-            console.log('clickhandlers assignment of src:',  $(this).data('cardValue') );
+          //this is whatever element you click on:
+            console.log('clickhandlers assignment of src:', $(this).data('cardValue') );
             $(this).attr('src', $(this).data('cardValue')).addClass('selected');
-            // $(this).attr('src', $(this).data('cardValue')).addClass('selected');
             app.checkMatch();
         });
     },
 
     checkMatch: function() {
-        console.log('checkMatch running');
-        // console.log('true or false', $('.selected').length == 2);
         if ($('.selected').length == 2) {
-            console.log('this', this);
-            // console.log('testing match', $('.selected').first().data('cardValue') == $('.selected').last().data('cardValue'));
             if ($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
                 $('.selected').each(function() {
                     $(this).animate({
@@ -185,7 +170,7 @@ var app = {
 
 };
 
-app.init();
+app.shuffle();
 
 //}; //end of main function
 
