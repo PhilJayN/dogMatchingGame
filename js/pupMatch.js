@@ -1,52 +1,50 @@
-var main = function() {
+// var main = function() {
 
-  var handlers = {
+    var handlers = {
 
-    init: function () {
-      this.hamburgerHandlers();
-      this.gameHandlers();
-    },
+        init: function() {
+            this.hamburgerHandlers();
+            this.gameHandlers();
+        },
 
-    hamburgerHandlers: function() {
-      var $primaryNav = $(".primary-nav");
-      var $hamburgerWrapper = $(".hamburger-wrapper");
-      var $menuTxt = $(".menu-txt");
+        hamburgerHandlers: function() {
+            var $primaryNav = $(".primary-nav");
+            var $hamburgerWrapper = $(".hamburger-wrapper");
+            var $menuTxt = $(".menu-txt");
 
-      $hamburgerWrapper.on("click", function() {
-          console.log('click');
-          $primaryNav.slideToggle("normal", function() {
-              if ($primaryNav.is(":visible")) {
-                  $menuTxt.text("Hide Menu");
-              } else {
-                  $menuTxt.text("Show Menu");
-              }
-          });
-      });
-    },
+            $hamburgerWrapper.on("click", function() {
+                console.log('click');
+                $primaryNav.slideToggle("normal", function() {
+                    if ($primaryNav.is(":visible")) {
+                        $menuTxt.text("Hide Menu");
+                    } else {
+                        $menuTxt.text("Show Menu");
+                    }
+                });
+            });
+        },
 
-    gameHandlers: function() {
-      var $playGameBtn = $(".play-game-btn");
-      var $gameWrapper = $(".game-wrapper");
+        gameHandlers: function() {
+            var $playGameBtn = $(".play-game-btn");
+            var $gameWrapper = $(".game-wrapper");
 
-      // var $column1 = $(".column-1");
-      // var $menuTxt = $(".menu-txt");
+            // var $column1 = $(".column-1");
+            // var $menuTxt = $(".menu-txt");
 
-      $playGameBtn.on("click", function() {
-          console.log('click play game');
-          $gameWrapper.slideToggle("normal", function() {
-              if ($gameWrapper.is(":visible")) {
-                  $playGameBtn.text("Hide Game");
-              } else {
-                  $playGameBtn.text("Play Game");
-              }
-          });
-      });
-    }
+            $playGameBtn.on("click", function() {
+                console.log('click play game');
+                $gameWrapper.slideToggle("normal", function() {
+                    if ($gameWrapper.is(":visible")) {
+                        $playGameBtn.text("Hide Game");
+                    } else {
+                        $playGameBtn.text("Play Game");
+                    }
+                });
+            });
+        }
 
-};
-handlers.init();
-
-};
+    };
+    handlers.init();
 
 var app = {
     // cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
@@ -73,43 +71,28 @@ var app = {
         console.log('shuffled', this.cards);
     },
 
-    randomNum: function() {
-        var random = 0; //set this to just undefined instead?
-        for (var i = 2; i <= 3; i++) {
-            console.log(i);
-        }
-    },
-
     shuffle: function() {
         //returns a shuffled cards array. Then put each item of arr into div
         // with class of cards
         var random = 0;
         var temp = 0;
-        // var arrTest = [];
         var cardsArrLen = this.cards.length;
-        // console.log('cards arr len', this.cards.length);
         for (var i = 1; i < cardsArrLen; i++) {
             random = Math.round(Math.random() * i);
-            // console.log('random', random);
-            // arrTest.push(random);
             temp = this.cards[i];
             this.cards[i] = this.cards[random];
             this.cards[random] = temp;
         }
         this.displayShuffled();
         this.assignCards();
-        // console.log('arrTest', arrTest);
     },
 
     assignCards: function() {
         $('.card').each(function(index) {
             console.log('this', this);
-            // console.log('each fxn index', index);
             // console.log('test', app.cards[0]); //do not use this.cards[]. it refers
             //to the div class of card.
             $(this).attr('data-card-value', app.cards[index]);
-            // $(this).attr('src', app.cards[index]);
-
         });
         this.clickHandlers();
     },
@@ -128,7 +111,7 @@ var app = {
 
         // console.log('true or false', $('.selected').length == 2);
         if ($('.selected').length == 2) {
-          console.log('this', this);
+            console.log('this', this);
             // console.log('testing match', $('.selected').first().data('cardValue') == $('.selected').last().data('cardValue'));
             if ($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
                 $('.selected').each(function() {
@@ -154,11 +137,11 @@ var app = {
             }
         }
     },
-      //REMOVE THIS!! JUST A TEST TO auto win game for debugging! WRITE IN BLOG
-        removeAllUnmatched: function () {
-          $('.column-1').children('img').removeClass('unmatched');
+    //REMOVE THIS!! JUST A TEST TO auto win game for debugging! WRITE IN BLOG
+    removeAllUnmatched: function() {
+        $('.column-1').children('img').removeClass('unmatched');
 
-        },
+    },
 
     checkWin: function() {
         if ($('.unmatched').length === 0) {
@@ -169,20 +152,20 @@ var app = {
 
     ///bug: does not clear the last two pics.
     resetGame: function() {
-      console.log('resetGame method running');
-      //reset images back to blue-gradient source
-      var $card = $('.card');
-      $card.each(function() {
+        console.log('resetGame method running');
+        //reset images back to blue-gradient source
+        var $card = $('.card');
+        $card.each(function() {
             $(this).attr('src', "images/gamePics/blue-gradient.jpg").animate({
                 opacity: 100
             });
-          console.log('this keyword after resetGame method running:', this);
+            console.log('this keyword after resetGame method running:', this);
 
-      });
+        });
 
-      app.shuffle();
+        app.shuffle();
 
-      this.clickHandlers();
+        this.clickHandlers();
 
     }
 
@@ -190,7 +173,10 @@ var app = {
 
 app.init();
 // console.log('cards len', app.cards.length);
-$(document).ready(main);
+
+//}; //end of main function
+
+// $(document).ready(main);
 
 
 
