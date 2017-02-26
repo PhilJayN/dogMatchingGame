@@ -9,7 +9,6 @@ html {
   /*-ms-text-size-adjust: none;*/
 }
 
-
 /*apply natural box layout, solves problem with some browser padding and width*/
 
 * {
@@ -22,6 +21,12 @@ body {
   background-color: #fbfbfb;
   color: rgb(28, 27, 27);
   font-family: 'Padauk', sans-serif;
+}
+
+h1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  /*text-align: center;*/
 }
 
 .header-wrapper {
@@ -109,7 +114,7 @@ color: #42A5F5;
 
 
 /*PUPPY GAME START*/
-/*.play-game-wrapper {
+/*.game-wrapper {
    border: 1px solid blue;
    margin: auto;
    width: 300px;
@@ -132,14 +137,9 @@ color: #42A5F5;
   margin: 2em auto;
 }
 
-
-h1 {
-  font-size: 1.2em;
-  font-weight: bold;
-  /*text-align: center;*/
-  /*border: 1px solid blue;*/
+.game-header {
+  text-align: center;
 }
-
 .hidden {
   display: none;
 }
