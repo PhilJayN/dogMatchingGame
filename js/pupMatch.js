@@ -50,8 +50,8 @@ var app = {
         "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
         "images/gamePics/yorkie-driving.jpg", "images/gamePics/yorkie-driving.jpg",
         "images/gamePics/yorkie-next-to-flowers.jpg", "images/gamePics/yorkie-next-to-flowers.jpg",
-        "images/gamePics/yorkie-sitting.jpg","images/gamePics/yorkie-sitting.jpg",
-        "images/gamePics/yorkie-sleeping.jpg","images/gamePics/yorkie-sleeping.jpg"
+        "images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sitting.jpg",
+        "images/gamePics/yorkie-sleeping.jpg", "images/gamePics/yorkie-sleeping.jpg"
     ],
 
     init: function() {
@@ -70,26 +70,38 @@ var app = {
             this.cards[random] = temp;
         }
         this.displayShuffled();
-        this.assignCards();
+        this.assignData();
     },
 
-    assignCards: function() {
-      var $card = $('.card');
+
+    displayShuffled: function() {
+        console.log('shuffled', this.cards);
+    },
+
+    assignData: function() {
+        var $card = $('.card');
         $card.each(function(index) {
             $(this).attr('data-card-value', app.cards[index]);
         });
         this.clickHandlers();
     },
 
-    displayShuffled: function() {
-        console.log('shuffled', this.cards);
-    },
+    // changeSrc: function () {
+    //   var $card = $('.card');
+    //     $card.each( function(index) {
+    //         $(this).attr('src', $(this).data('cardValue')).addClass('selected');
+    //     });
+    //   // $(this).attr('src', $(this).data('cardValue')).addClass('selected');
+    // },
 
+    //changes the img src of clicked element using data from shuffled cards.
+    //then Adds class selected to the element clicked.
     clickHandlers: function() {
-      var $card = $('.card');
+        var $card = $('.card');
         $card.on('click', function() {
-            console.log('click');
+            // console.log('click');
             $(this).attr('src', $(this).data('cardValue')).addClass('selected');
+            // $(this).attr('src', $(this).data('cardValue')).addClass('selected');
             app.checkMatch();
         });
     },
@@ -143,13 +155,20 @@ var app = {
             $(this).attr('src', "images/gamePics/blue-gradient.jpg").animate({
                 opacity: 100
             });
+            $(this).removeAttr('data-card-value');
+            $(this).removeClass('selected');
+            $(this).addClass('unmatched');
             console.log('this keyword after resetGame method running:', this);
-
         });
+        //remove all selected class from img:
 
-        app.shuffle();
+        //relmove data-card-value from each img element:
 
-        this.clickHandlers();
+        app.init();
+
+        //then run shuffle:
+        // app.shuffle();
+        // this.clickHandlers();
 
     }
 

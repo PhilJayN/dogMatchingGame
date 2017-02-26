@@ -115,7 +115,7 @@ color: #42A5F5;
 
 /*PUPPY GAME START*/
 .game-wrapper {
-  display: none;
+  /*display: none;*/
    /*border: 1px solid blue;*/
    margin: auto;
 }
