@@ -130,6 +130,13 @@ var app = {
         }
     },
 
+    removeDataAttr: function () {
+      $('.card').each(function() {
+          $(this).removeAttr('data-card-value');
+      });
+
+    },
+
     ///bug: does not clear the last two pics.
     resetGame: function() {
         console.log('resetGame method running');
@@ -145,10 +152,9 @@ var app = {
           //add back opacity:
             $(this).attr('src', "images/gamePics/flower-blurred.jpg");
             $(this).removeAttr('data-card-value');
-            //works:
-            // $(this).removeAttr('src');
-            $(this).removeClass('selected');
-            $(this).addClass('unmatched');
+
+            // $(this).removeClass('selected');
+            // $(this).addClass('unmatched');
               //works:
             // $(this).removeClass('card');
             // $(this).addClass('teddy');
