@@ -99,7 +99,7 @@ var app = {
     clickHandlers: function() {
         var $card = $('.card');
         $card.on('click', function() {
-            // console.log('click');
+            console.log('clickhandlers assignment of src:',  $(this).data('cardValue') );
             $(this).attr('src', $(this).data('cardValue')).addClass('selected');
             // $(this).attr('src', $(this).data('cardValue')).addClass('selected');
             app.checkMatch();
@@ -150,21 +150,38 @@ var app = {
     resetGame: function() {
         console.log('resetGame method running');
         //reset images back to blue-gradient source
-        var $card = $('.card');
-        $card.each(function() {
-            $(this).attr('src', "images/gamePics/blue-gradient.jpg").animate({
-                opacity: 100
-            });
+        // debugger;
+        // var $card = $('.card');
+
+        // $('.selected').each(function() {
+        //     $(this).removeClass('selected');
+        // });
+
+        $('.card').each(function() {
+            $(this).attr('src', "images/gamePics/flower-blurred.jpg");
+            // $(this).attr('src', "images/gamePics/blue-gradient.jpg").animate({
+            //     opacity: 100
+            // });
+            // debugger;
             $(this).removeAttr('data-card-value');
+            //works:
+            // $(this).removeAttr('src');
+
             $(this).removeClass('selected');
             $(this).addClass('unmatched');
+
+
+              //works:
+            // $(this).removeClass('card');
+            // $(this).addClass('teddy');
+
             console.log('this keyword after resetGame method running:', this);
         });
         //remove all selected class from img:
 
         //relmove data-card-value from each img element:
 
-        app.init();
+        // app.init();
 
         //then run shuffle:
         // app.shuffle();
