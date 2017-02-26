@@ -68,7 +68,7 @@ var app = {
 
     init: function() {
         this.shuffle();
-        console.log('jQuery ', $('.hello').length);
+        // console.log('jQuery ', $('.hello').length);
     },
 
 
@@ -145,7 +145,9 @@ var app = {
                 $('.selected').each(function() {
                     $(this).removeClass('selected');
                 });
-                app.checkWin();
+                // setTimeout(
+                  app.checkWin();
+                // });
             } else {
                 setTimeout(function() {
                     $('.selected').each(function() {
@@ -157,11 +159,21 @@ var app = {
             }
         }
     },
+      //REMOVE THIS!! JUST A TEST TO auto win game for debugging! WRITE IN BLOG
+        removeAllUnmatched: function () {
+          $('.column-1').children('img').removeClass('unmatched');
+
+        },
 
     checkWin: function() {
         if ($('.unmatched').length === 0) {
             console.log('you WIN!');
+            alert("Great job!");
         }
+    },
+
+    resetGame: function() {
+
     }
 
 };
