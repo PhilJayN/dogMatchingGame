@@ -139,6 +139,12 @@ color: #42A5F5;
   margin: 2em auto;
 }
 
+.board-wrapper {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+
+}
+
 .game-header {
   text-align: center;
 }
