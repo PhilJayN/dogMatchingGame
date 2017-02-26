@@ -21,8 +21,7 @@ html {
 body {
   background-color: #fbfbfb;
   color: rgb(28, 27, 27);
-  /*background-color: black;*/
-
+  font-family: 'Padauk', sans-serif;
 }
 
 .header-wrapper {
@@ -87,10 +86,6 @@ body {
   color: #64B5F6;
 color: #90CAF9;
 color: #42A5F5;
-}
-
-.nav-wrapper, .footer-wrapper {
-  font-family: 'Padauk', sans-serif;
 }
 
 

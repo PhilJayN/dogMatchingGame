@@ -147,7 +147,7 @@ var app = {
             } else {
                 setTimeout(function() {
                     $('.selected').each(function() {
-                        $(this).attr('src', "images/gamePics/blue-blurred.jpg").removeClass('selected');
+                        $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
                         // $(this).removeClass('selected');
                     });
                 }, 1000);
