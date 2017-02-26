@@ -158,25 +158,20 @@ var app = {
         // });
 
         $('.card').each(function() {
+          //add back opacity:
             $(this).attr('src', "images/gamePics/flower-blurred.jpg");
-            // $(this).attr('src', "images/gamePics/blue-gradient.jpg").animate({
-            //     opacity: 100
-            // });
-            // debugger;
             $(this).removeAttr('data-card-value');
             //works:
             // $(this).removeAttr('src');
-
             $(this).removeClass('selected');
             $(this).addClass('unmatched');
-
-
               //works:
             // $(this).removeClass('card');
             // $(this).addClass('teddy');
-
             console.log('this keyword after resetGame method running:', this);
         });
+
+        app.shuffle();
         //remove all selected class from img:
 
         //relmove data-card-value from each img element:
@@ -186,7 +181,6 @@ var app = {
         //then run shuffle:
         // app.shuffle();
         // this.clickHandlers();
-
     }
 
 };
