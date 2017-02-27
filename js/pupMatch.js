@@ -57,14 +57,19 @@ var app = {
 init: function() {
   this.shuffle();
 },
+    // cards: [
+    //     "images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-beach-footprints.jpg",
+    //     "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
+    //     "images/gamePics/yorkie-driving.jpg", "images/gamePics/yorkie-driving.jpg",
+    //     "images/gamePics/yorkie-next-to-flowers.jpg", "images/gamePics/yorkie-next-to-flowers.jpg",
+    //     "images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sitting.jpg",
+    //     "images/gamePics/yorkie-sleeping.jpg", "images/gamePics/yorkie-sleeping.jpg"
+    // ],
+
     cards: [
-        "images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-beach-footprints.jpg",
-        "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
-        "images/gamePics/yorkie-driving.jpg", "images/gamePics/yorkie-driving.jpg",
-        "images/gamePics/yorkie-next-to-flowers.jpg", "images/gamePics/yorkie-next-to-flowers.jpg",
-        "images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sitting.jpg",
-        "images/gamePics/yorkie-sleeping.jpg", "images/gamePics/yorkie-sleeping.jpg"
-    ],
+'1.jpg','1.jpg', '2.jpg', '2.jpg',
+'3.jpg','3.jpg',    ],
+ // '4.jpg', '4.jpg'
 
     //returns a shuffled cards array
     shuffle: function() {
@@ -84,7 +89,7 @@ init: function() {
     // assign each img a data- value frm cards arr
     assignData: function() {
         var $card = $('.card');
-        console.log('assignData cards arr used: ', app.cards);
+        console.log('assignDatcards: ', app.cards);
 
         $card.each(function(index) {
           // debugger;
@@ -152,8 +157,7 @@ init: function() {
     }
 };
 
-debugger;
-app.init();
+// app.init();
 
 // $(this).removeAttr('data-card-value');
 // $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
