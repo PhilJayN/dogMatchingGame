@@ -85,7 +85,7 @@ var app = {
         $card.on('click', function() {
           console.log('click in clickhandlers ACTIVATED!');
             //this is whatever element you click on:
-            // console.log('what is this', this);
+            console.log('this el', this, 'cardValue', $(this).data('cardValue'));
             // debugger;
             console.log('clickhandlers assignment of src:', $(this).data('cardValue'));
             // $(this).attr('src', $(this).data('cardValue')).addClass('selected');
