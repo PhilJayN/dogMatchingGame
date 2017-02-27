@@ -138,7 +138,9 @@ init: function() {
     resetGame: function() {
         // console.log('resetGame method running');
             $('.card').each(function() {
-                $(this).removeAttr('data-card-value').attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
+                $(this).removeAttr('data-card-value').attr('src', "images/gamePics/blue-gradient.jpg").animate({
+                    opacity: 100
+                }).removeClass('selected');
             });
 
             // debugger;
