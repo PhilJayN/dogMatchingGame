@@ -1,56 +1,56 @@
 // var main = function() {
 
 
-// var handlers = {
-//
-//     init: function() {
-//         this.hamburgerHandlers();
-//         this.gameHandlers();
-//         this.testClick();
-//     },
-//
-//     testClick: function () {
-//       var $testClick = $('.test-btn');
-//       $testClick.on("click", function(){
-//         app.resetGame();
-//       });
-//     },
-//
-//     hamburgerHandlers: function() {
-//         var $primaryNav = $(".primary-nav");
-//         var $hamburgerWrapper = $(".hamburger-wrapper");
-//         var $menuTxt = $(".menu-txt");
-//
-//         $hamburgerWrapper.on("click", function() {
-//             console.log('click');
-//             $primaryNav.slideToggle("normal", function() {
-//                 if ($primaryNav.is(":visible")) {
-//                     $menuTxt.text("Hide Menu");
-//                 } else {
-//                     $menuTxt.text("Show Menu");
-//                 }
-//             });
-//         });
-//     },
-//
-//     gameHandlers: function() {
-//         var $playGameBtn = $(".play-game-btn");
-//         var $gameWrapper = $(".game-wrapper");
-//
-//         $playGameBtn.on("click", function() {
-//             console.log('click play game');
-//             $gameWrapper.slideToggle("normal", function() {
-//                 if ($gameWrapper.is(":visible")) {
-//                     $playGameBtn.text("Hide Game");
-//                 } else {
-//                     $playGameBtn.text("Play Game");
-//                 }
-//             });
-//         });
-//     }
-//
-// };
-// handlers.init();
+var handlers = {
+
+    init: function() {
+        this.hamburgerHandlers();
+        this.gameHandlers();
+        this.testClick();
+    },
+
+    testClick: function () {
+      var $testClick = $('.test-btn');
+      $testClick.on("click", function(){
+        app.resetGame();
+      });
+    },
+
+    hamburgerHandlers: function() {
+        var $primaryNav = $(".primary-nav");
+        var $hamburgerWrapper = $(".hamburger-wrapper");
+        var $menuTxt = $(".menu-txt");
+
+        $hamburgerWrapper.on("click", function() {
+            console.log('click');
+            $primaryNav.slideToggle("normal", function() {
+                if ($primaryNav.is(":visible")) {
+                    $menuTxt.text("Hide Menu");
+                } else {
+                    $menuTxt.text("Show Menu");
+                }
+            });
+        });
+    },
+
+    gameHandlers: function() {
+        var $playGameBtn = $(".play-game-btn");
+        var $gameWrapper = $(".game-wrapper");
+
+        $playGameBtn.on("click", function() {
+            console.log('click play game');
+            $gameWrapper.slideToggle("normal", function() {
+                if ($gameWrapper.is(":visible")) {
+                    $playGameBtn.text("Hide Game");
+                } else {
+                    $playGameBtn.text("Play Game");
+                }
+            });
+        });
+    }
+
+};
+handlers.init();
 
 var app = {
 
