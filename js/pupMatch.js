@@ -108,10 +108,7 @@ var app = {
                 $selected.each(function() {
                     $(this).animate({
                         opacity: 0
-                    }).removeClass('unmatched');
-                });
-                $selected.each(function() {
-                    $(this).removeClass('selected');
+                    }).removeClass('unmatched').removeClass('selected');
                 });
                 app.checkWin();
             } else {
@@ -123,15 +120,9 @@ var app = {
             }
         }
     },
-    //REMOVE THIS!! JUST A TEST TO auto win game for debugging! WRITE IN BLOG
-    removeAllUnmatched: function() {
-        $('.column-1').children('img').removeClass('unmatched');
-
-    },
 
     checkWin: function() {
         if ($('.unmatched').length === 0) {
-            console.log('you WIN!');
             alert("Great job!");
         }
     },
@@ -140,7 +131,6 @@ var app = {
       $('.card').each(function() {
           $(this).removeAttr('data-card-value');
       });
-
     },
 
     ///bug: does not clear the last two pics.
@@ -205,14 +195,6 @@ app.shuffle();
 
 
 
-
-// var $showNavBtn = $(".hamburger-btn");
-// $primaryNav: $(".primary-nav"),
-// $hamburgerWrapper: $(".hamburger-wrapper"),
-// $menuTxt: $(".menu-txt"),
-
-
-
 (function(){
 	var original = jQuery.fn.init;
 
@@ -225,3 +207,14 @@ app.shuffle();
 		return obj;
 	};
 })();
+
+
+
+
+
+
+
+//REMOVE THIS!! JUST A TEST TO auto win game for debugging! WRITE IN BLOG
+// removeAllUnmatched: function() {
+//     $('.column-1').children('img').removeClass('unmatched');
+// },
