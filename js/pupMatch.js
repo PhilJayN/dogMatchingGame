@@ -113,7 +113,9 @@ init: function() {
             console.log('this el', this, 'data-card-value', $(this).data('card-value'));
 
             // console.log('clickhandlers assignment of src:', $(this).data('cardValue'));
-            $(this).attr('src', $(this).data('card-value'));
+            //get data-card-value inside data:
+            console.log('data-card-value inside data', $(this).attr('data-card-value'));
+            $(this).attr('src', $(this).attr('data-card-value'));
             $(this).addClass('selected');
             app.checkMatch();
         });
