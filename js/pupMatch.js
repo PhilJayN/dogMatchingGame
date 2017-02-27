@@ -57,18 +57,18 @@ var app = {
 init: function() {
   this.shuffle();
 },
-    // cards: [
-    //     "images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-beach-footprints.jpg",
-    //     "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
-    //     "images/gamePics/yorkie-driving.jpg", "images/gamePics/yorkie-driving.jpg",
-    //     "images/gamePics/yorkie-next-to-flowers.jpg", "images/gamePics/yorkie-next-to-flowers.jpg",
-    //     "images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sitting.jpg",
-    //     "images/gamePics/yorkie-sleeping.jpg", "images/gamePics/yorkie-sleeping.jpg"
-    // ],
-
     cards: [
-'beach.jpg','beach.jpg', 'drive.jpg', 'drive.jpg',
-'flower.jpg','flower.jpg',    ],
+        "images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-beach-footprints.jpg",
+        "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
+        "images/gamePics/yorkie-driving.jpg", "images/gamePics/yorkie-driving.jpg",
+        "images/gamePics/yorkie-next-to-flowers.jpg", "images/gamePics/yorkie-next-to-flowers.jpg",
+        "images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sitting.jpg",
+        "images/gamePics/yorkie-sleeping.jpg", "images/gamePics/yorkie-sleeping.jpg"
+    ],
+
+//     cards: [
+// 'beach.jpg','beach.jpg', 'drive.jpg', 'drive.jpg',
+// 'flower.jpg','flower.jpg',    ],
  // '4.jpg', '4.jpg'
 
     //returns a shuffled cards array
