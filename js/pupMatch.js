@@ -124,7 +124,7 @@ init: function() {
     checkMatch: function() {
         var $selected = $('.selected');
         if ($selected.length === 2) {
-            if ($selected.first().data('card-value') === $selected.last().data('card-value')) {
+            if ($selected.first().attr('data-card-value') === $selected.last().attr('data-card-value')) {
                 $selected.each(function() {
                     $(this).animate({
                         opacity: 0
