@@ -157,7 +157,7 @@ init: function() {
     }
 };
 
-// app.init();
+app.init();
 
 // $(this).removeAttr('data-card-value');
 // $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
