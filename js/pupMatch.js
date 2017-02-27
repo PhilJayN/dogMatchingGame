@@ -53,12 +53,16 @@
 // handlers.init();
 
 var app = {
+
+init: function() {
+  this.shuffle();
+},
     cards: [
         "images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-beach-footprints.jpg",
-        // "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
-        // "images/gamePics/yorkie-driving.jpg", "images/gamePics/yorkie-driving.jpg",
-        // "images/gamePics/yorkie-next-to-flowers.jpg", "images/gamePics/yorkie-next-to-flowers.jpg",
-        // "images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sitting.jpg",
+        "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
+        "images/gamePics/yorkie-driving.jpg", "images/gamePics/yorkie-driving.jpg",
+        "images/gamePics/yorkie-next-to-flowers.jpg", "images/gamePics/yorkie-next-to-flowers.jpg",
+        "images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sitting.jpg",
         "images/gamePics/yorkie-sleeping.jpg", "images/gamePics/yorkie-sleeping.jpg"
     ],
 
@@ -81,8 +85,11 @@ var app = {
     assignData: function() {
         var $card = $('.card');
         $card.each(function(index) {
-            $(this).removeAttr('data-card-value');
+            // $(this).removeAttr('data-card-value');
             $(this).attr('data-card-value', app.cards[index]);
+            //correct data value added:
+            //  console.log('data value added:', app.cards[index]) ;
+
             // console.log('app.cards index', app.cards[11]);
         });
         this.clickHandlers();
@@ -92,11 +99,11 @@ var app = {
     //then Adds class selected to the element clicked.
     clickHandlers: function() {
         // var $card = $('.card');
-        $('.card').on('click', function() {
+        //this is whatever element you click on:
+        $('.card').off().on('click', function() {
           console.log('click in clickhandlers ACTIVATED!');
-            //this is whatever element you click on:
             console.log('this el', this, 'cardValue', $(this).data('cardValue'));
-            console.log('clickhandlers assignment of src:', $(this).data('cardValue'));
+            // console.log('clickhandlers assignment of src:', $(this).data('cardValue'));
             $(this).attr('src', $(this).data('cardValue')).addClass('selected');
             app.checkMatch();
         });
@@ -130,15 +137,22 @@ var app = {
 
     resetGame: function() {
         // console.log('resetGame method running');
-        //     $('.card').each(function() {
-        //         $(this).removeAttr('data-card-value');
-        //         $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
-        //     });
+            $('.card').each(function() {
+                $(this).removeAttr('data-card-value').attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
+            });
 
             // debugger;
             app.shuffle();
     }
 };
+
+
+app.init();
+
+// $(this).removeAttr('data-card-value');
+// $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
+
+
 
 // app.shuffle();
 
