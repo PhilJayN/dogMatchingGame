@@ -1,4 +1,3 @@
-
 // var main = function() {
 var handlers = {
 
@@ -44,8 +43,6 @@ var handlers = {
 handlers.init();
 
 var app = {
-    // cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
-
     cards: [
         "images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-beach-footprints.jpg",
         "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
@@ -66,21 +63,17 @@ var app = {
             this.cards[i] = this.cards[random];
             this.cards[random] = temp;
         }
-        this.displayShuffled();
-        this.assignData();
-    },
-
-    displayShuffled: function() {
         console.log('shuffled cards: ', this.cards);
+        this.assignData();
     },
 
     // assign each img a data- value frm cards arr
     assignData: function() {
-      var $card = $('.card');
+        var $card = $('.card');
         $card.each(function(index) {
-          // console.log('index', index);
-              $(this).removeAttr('data-card-value');
+            $(this).removeAttr('data-card-value');
             $(this).attr('data-card-value', app.cards[index]);
+            // console.log('app.cards index', app.cards[11]);
         });
         this.clickHandlers();
     },
@@ -90,19 +83,20 @@ var app = {
     clickHandlers: function() {
         var $card = $('.card');
         $card.on('click', function() {
-          //this is whatever element you click on:
-          // console.log('what is this', this);
-          // debugger;
-            console.log('clickhandlers assignment of src:', $(this).data('cardValue') );
+          console.log('click in clickhandlers ACTIVATED!');
+            //this is whatever element you click on:
+            // console.log('what is this', this);
+            // debugger;
+            console.log('clickhandlers assignment of src:', $(this).data('cardValue'));
             // $(this).attr('src', $(this).data('cardValue')).addClass('selected');
-            $(this).attr( 'src', $(this).data('cardValue') ).addClass('selected');
+            $(this).attr('src', $(this).data('cardValue')).addClass('selected');
 
             app.checkMatch();
         });
     },
 
     checkMatch: function() {
-      var $selected = $('.selected');
+        var $selected = $('.selected');
         if ($selected.length === 2) {
             if ($selected.first().data('cardValue') === $selected.last().data('cardValue')) {
                 $selected.each(function() {
@@ -127,10 +121,10 @@ var app = {
         }
     },
 
-    removeDataAttr: function () {
-      $('.card').each(function() {
-          $(this).removeAttr('data-card-value');
-      });
+    removeDataAttr: function() {
+        $('.card').each(function() {
+            $(this).removeAttr('data-card-value');
+        });
     },
 
     ///bug: does not clear the last two pics.
@@ -195,17 +189,17 @@ app.shuffle();
 
 
 
-(function(){
-	var original = jQuery.fn.init;
+(function() {
+    var original = jQuery.fn.init;
 
-	jQuery.fn.init = function(selector, context, rootjQuery){
-	 	var obj = new original(selector, context, rootjQuery);
+    jQuery.fn.init = function(selector, context, rootjQuery) {
+        var obj = new original(selector, context, rootjQuery);
 
-		if (obj.selector && obj.length === 0 && console && console.warn)
-			console.warn("jQuery was called with a selector of '" + selector + "' and returned an empty object");
+        if (obj.selector && obj.length === 0 && console && console.warn)
+            console.warn("jQuery was called with a selector of '" + selector + "' and returned an empty object");
 
-		return obj;
-	};
+        return obj;
+    };
 })();
 
 
