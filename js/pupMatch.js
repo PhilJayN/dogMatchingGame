@@ -110,10 +110,11 @@ init: function() {
         //this is whatever element you click on:
         $('.card').off().on('click', function() {
           console.log('click in clickhandlers ACTIVATED!');
-            console.log('this el', this, 'cardValue', $(this).data('cardValue'));
+            console.log('this el', this, 'data-card-value', $(this).data('card-value'));
 
             // console.log('clickhandlers assignment of src:', $(this).data('cardValue'));
-            $(this).attr('src', $(this).data('card-value')).addClass('selected');
+            $(this).attr('src', $(this).data('card-value'));
+            $(this).addClass('selected');
             app.checkMatch();
         });
     },
@@ -121,7 +122,7 @@ init: function() {
     checkMatch: function() {
         var $selected = $('.selected');
         if ($selected.length === 2) {
-            if ($selected.first().data('cardValue') === $selected.last().data('cardValue')) {
+            if ($selected.first().data('card-value') === $selected.last().data('card-value')) {
                 $selected.each(function() {
                     $(this).animate({
                         opacity: 0
