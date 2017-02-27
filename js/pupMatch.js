@@ -84,7 +84,10 @@ init: function() {
     // assign each img a data- value frm cards arr
     assignData: function() {
         var $card = $('.card');
+        console.log('assignData cards arr used: ', app.cards);
+
         $card.each(function(index) {
+          // debugger;
             // $(this).removeAttr('data-card-value');
             $(this).attr('data-card-value', app.cards[index]);
             //correct data value added:
@@ -103,8 +106,9 @@ init: function() {
         $('.card').off().on('click', function() {
           console.log('click in clickhandlers ACTIVATED!');
             console.log('this el', this, 'cardValue', $(this).data('cardValue'));
+
             // console.log('clickhandlers assignment of src:', $(this).data('cardValue'));
-            $(this).attr('src', $(this).data('cardValue')).addClass('selected');
+            $(this).attr('src', $(this).data('card-value')).addClass('selected');
             app.checkMatch();
         });
     },
@@ -148,7 +152,7 @@ init: function() {
     }
 };
 
-
+debugger;
 app.init();
 
 // $(this).removeAttr('data-card-value');
@@ -176,8 +180,6 @@ app.init();
         return obj;
     };
 })();
-
-
 
 
 
