@@ -45,10 +45,10 @@ handlers.init();
 var app = {
     cards: [
         "images/gamePics/yorkie-beach-footprints.jpg", "images/gamePics/yorkie-beach-footprints.jpg",
-        "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
-        "images/gamePics/yorkie-driving.jpg", "images/gamePics/yorkie-driving.jpg",
-        "images/gamePics/yorkie-next-to-flowers.jpg", "images/gamePics/yorkie-next-to-flowers.jpg",
-        "images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sitting.jpg",
+        // "images/gamePics/yorkie-clothes-shoes.jpg", "images/gamePics/yorkie-clothes-shoes.jpg",
+        // "images/gamePics/yorkie-driving.jpg", "images/gamePics/yorkie-driving.jpg",
+        // "images/gamePics/yorkie-next-to-flowers.jpg", "images/gamePics/yorkie-next-to-flowers.jpg",
+        // "images/gamePics/yorkie-sitting.jpg", "images/gamePics/yorkie-sitting.jpg",
         "images/gamePics/yorkie-sleeping.jpg", "images/gamePics/yorkie-sleeping.jpg"
     ],
 
@@ -81,16 +81,13 @@ var app = {
     //changes the img src of clicked element using data-card-value
     //then Adds class selected to the element clicked.
     clickHandlers: function() {
-        var $card = $('.card');
-        $card.on('click', function() {
+        // var $card = $('.card');
+        $('.card').on('click', function() {
           console.log('click in clickhandlers ACTIVATED!');
             //this is whatever element you click on:
             console.log('this el', this, 'cardValue', $(this).data('cardValue'));
-            // debugger;
             console.log('clickhandlers assignment of src:', $(this).data('cardValue'));
-            // $(this).attr('src', $(this).data('cardValue')).addClass('selected');
             $(this).attr('src', $(this).data('cardValue')).addClass('selected');
-
             app.checkMatch();
         });
     },
@@ -121,62 +118,14 @@ var app = {
         }
     },
 
-    removeDataAttr: function() {
-        $('.card').each(function() {
-            $(this).removeAttr('data-card-value');
-        });
-    },
-
-    ///bug: does not clear the last two pics.
     resetGame: function() {
         console.log('resetGame method running');
-        app.shuffle();
-
-
-
-
-        //
-        // $('.card').each(function() {
-        //   //add back opacity:
-        //     $(this).attr('src', "images/gamePics/flower-blurred.jpg").animate({
-        //             opacity: 100
-        //         });
-        //     $(this).removeAttr('data-card-value');
-        //
-        //     // $(this).removeClass('selected');
-        //     // $(this).addClass('unmatched');
-        //       //works:
-        //     // $(this).removeClass('card');
-        //     // $(this).addClass('teddy');
-        //     console.log('this keyword after resetGame method running:', this);
-        // });
-
-
-
-        //remove all selected class from img:
-
-        //relmove data-card-value from each img element:
-
-        // app.init();
-
-        //then run shuffle:
+            $('.card').each(function() {
+                $(this).removeAttr('data-card-value');
+                $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
+            });
         // app.shuffle();
-        // this.clickHandlers();
 
-
-        //reset images back to blue-gradient source
-        // debugger;
-        // var $card = $('.card');
-
-        // $('.selected').each(function() {
-        //     $(this).removeClass('selected');
-        // });
-
-        // $selected.each(function() {
-        //     $(this).animate({
-        //         opacity: 0
-        //     }).removeClass('unmatched');
-        // });
     }
 
 };
@@ -206,9 +155,31 @@ app.shuffle();
 
 
 
+//
+// removeDataAttr: function() {
+//     $('.card').each(function() {
+//         $(this).removeAttr('data-card-value');
+//     });
+// },
 
 
 //REMOVE THIS!! JUST A TEST TO auto win game for debugging! WRITE IN BLOG
 // removeAllUnmatched: function() {
 //     $('.column-1').children('img').removeClass('unmatched');
 // },
+
+
+// $('.card').each(function() {
+//   //add back opacity:
+//     $(this).attr('src', "images/gamePics/flower-blurred.jpg").animate({
+//             opacity: 100
+//         });
+//     $(this).removeAttr('data-card-value');
+//
+//     // $(this).removeClass('selected');
+//     // $(this).addClass('unmatched');
+//       //works:
+//     // $(this).removeClass('card');
+//     // $(this).addClass('teddy');
+//     console.log('this keyword after resetGame method running:', this);
+// });
