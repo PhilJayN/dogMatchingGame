@@ -67,8 +67,8 @@ init: function() {
     // ],
 
     cards: [
-'1.jpg','1.jpg', '2.jpg', '2.jpg',
-'3.jpg','3.jpg',    ],
+'beach.jpg','beach.jpg', 'drive.jpg', 'drive.jpg',
+'flower.jpg','flower.jpg',    ],
  // '4.jpg', '4.jpg'
 
     //returns a shuffled cards array
