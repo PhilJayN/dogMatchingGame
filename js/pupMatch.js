@@ -1,14 +1,15 @@
 // var main = function() {
 
 
-var handlers = {
+var clickHandlers = {
 
     init: function() {
-        this.hamburgerHandlers();
-        this.gameHandlers();
+        this.hamburger();
+        this.game();
+        this.reset();
     },
 
-    hamburgerHandlers: function() {
+    hamburger: function() {
         var $primaryNav = $(".primary-nav");
         var $hamburgerWrapper = $(".hamburger-wrapper");
         var $menuTxt = $(".menu-txt");
@@ -25,7 +26,7 @@ var handlers = {
         });
     },
 
-    gameHandlers: function() {
+    game: function() {
         var $playGameBtn = $(".play-game-btn");
         var $gameWrapper = $(".game-wrapper");
 
@@ -39,10 +40,17 @@ var handlers = {
                 }
             });
         });
+    },
+
+    reset: function () {
+      var $resetBtn = $('.reset-btn');
+      $resetBtn.on("click", function(){
+        app.resetGame();
+      });
     }
 
 };
-handlers.init();
+clickHandlers.init();
 
 var app = {
 
@@ -81,12 +89,12 @@ var app = {
         $card.each(function(index) {
             $(this).attr('data-card-value', app.cards[index]);
         });
-        this.clickHandlers();
+        this.assignImage();
     },
 
     //changes the img src of clicked element using data-card-value
     //then Adds class selected to the element clicked.
-    clickHandlers: function() {
+    assignImage: function() {
         //this is whatever element you click on:
         $('.card').off().on('click', function() {
             console.log('click in clickhandlers ACTIVATED!');
@@ -131,7 +139,14 @@ var app = {
             }).removeClass('selected');
         });
         app.shuffle();
-    }
+    },
+
+    //auto win game for debugging!
+    autoWin: function() {
+        $('.column-1').children('img').removeClass('unmatched');
+        this.checkWin();
+    },
+
 };
 
 app.init();
@@ -152,8 +167,3 @@ app.init();
         return obj;
     };
 })();
-
-//REMOVE THIS!! JUST A TEST TO auto win game for debugging! WRITE IN BLOG
-// removeAllUnmatched: function() {
-//     $('.column-1').children('img').removeClass('unmatched');
-// },
