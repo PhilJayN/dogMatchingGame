@@ -8,6 +8,7 @@ var clickHandlers = {
         this.game();
         this.reset();
         this.modal();
+        this.playAgain();
     },
 
     hamburger: function() {
@@ -42,6 +43,10 @@ var clickHandlers = {
         $modal.hide();
       });
 
+      return {
+        $modal: $modal
+      };
+
 
     },
 
@@ -66,6 +71,17 @@ var clickHandlers = {
       $resetBtn.on("click", function(){
         app.resetGame();
       });
+    },
+
+    playAgain: function () {
+      var $modal = $(".modal");
+      var $playAgainBtn = $('.play-again-btn');
+      $playAgainBtn.on("click", function(){
+        app.resetGame();
+        $modal.hide();
+        console.log('play again btn clicked');
+      });
+
     }
 
 
