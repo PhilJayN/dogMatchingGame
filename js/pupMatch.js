@@ -1,94 +1,6 @@
 // var main = function() {
 
 
-var clickHandlers = {
-
-    init: function() {
-        this.hamburger();
-        this.game();
-        this.reset();
-        this.modal();
-        this.playAgain();
-    },
-
-    hamburger: function() {
-        var $primaryNav = $(".primary-nav");
-        var $hamburgerWrapper = $(".hamburger-wrapper");
-        var $menuTxt = $(".menu-txt");
-
-        $hamburgerWrapper.on("click", function() {
-            console.log('click');
-            $primaryNav.slideToggle("normal", function() {
-                if ($primaryNav.is(":visible")) {
-                    $menuTxt.text("Hide Menu");
-                } else {
-                    $menuTxt.text("Show Menu");
-                }
-            });
-        });
-    },
-
-    modal: function () {
-      var $modal = $(".modal");
-      var $openModalBtn = $(".open-modal-btn");
-      var $modalExit = $(".modal-exit");
-
-      $openModalBtn.on("click", function () {
-        console.log('clicked opened modal');
-        $modal.show();
-      });
-
-      $modalExit.on("click", function () {
-        console.log('cliced exit modal');
-        $modal.hide();
-      });
-
-      return {
-        $modal: $modal
-      };
-
-
-    },
-
-    game: function() {
-        var $playGameBtn = $(".play-game-btn");
-        var $gameWrapper = $(".game-wrapper");
-
-        $playGameBtn.on("click", function() {
-            console.log('click play game');
-            $gameWrapper.slideToggle("normal", function() {
-                if ($gameWrapper.is(":visible")) {
-                    $playGameBtn.text("Hide Game");
-                } else {
-                    $playGameBtn.text("Play Game");
-                }
-            });
-        });
-    },
-
-    reset: function () {
-      var $resetBtn = $('.reset-btn');
-      $resetBtn.on("click", function(){
-        app.resetGame();
-      });
-    },
-
-    playAgain: function () {
-      var $modal = $(".modal");
-      var $playAgainBtn = $('.play-again-btn');
-      $playAgainBtn.on("click", function(){
-        app.resetGame();
-        $modal.hide();
-        console.log('play again btn clicked');
-      });
-
-    }
-
-
-
-};
-clickHandlers.init();
-
 var app = {
 
     init: function() {
@@ -221,6 +133,94 @@ app.init();
 
 //}; //end of main function
 // $(document).ready(main);
+
+
+
+
+
+
+
+var clickHandlers = {
+
+    hamburger: (function() {
+        var $primaryNav = $(".primary-nav");
+        var $hamburgerWrapper = $(".hamburger-wrapper");
+        var $menuTxt = $(".menu-txt");
+
+        $hamburgerWrapper.on("click", function() {
+            console.log('click');
+            $primaryNav.slideToggle("normal", function() {
+                if ($primaryNav.is(":visible")) {
+                    $menuTxt.text("Hide Menu");
+                } else {
+                    $menuTxt.text("Show Menu");
+                }
+            });
+        });
+    })(),
+
+    modal: (function () {
+      var $modal = $(".modal");
+      var $openModalBtn = $(".open-modal-btn");
+      var $modalExit = $(".modal-exit");
+
+      $openModalBtn.on("click", function () {
+        console.log('clicked opened modal');
+        $modal.show();
+      });
+
+      $modalExit.on("click", function () {
+        console.log('cliced exit modal');
+        $modal.hide();
+      });
+
+      return {
+        $modal: $modal
+      };
+
+
+    })(),
+
+    game: (function() {
+        var $playGameBtn = $(".play-game-btn");
+        var $gameWrapper = $(".game-wrapper");
+
+        $playGameBtn.on("click", function() {
+            console.log('click play game');
+            $gameWrapper.slideToggle("normal", function() {
+                if ($gameWrapper.is(":visible")) {
+                    $playGameBtn.text("Hide Game");
+                } else {
+                    $playGameBtn.text("Play Game");
+                }
+            });
+        });
+    })(),
+
+    reset: (function () {
+      var $resetBtn = $('.reset-btn');
+      $resetBtn.on("click", function(){
+        app.resetGame();
+      });
+    })(),
+
+    playAgain: (function () {
+      var $modal = $(".modal");
+      var $playAgainBtn = $('.play-again-btn');
+      $playAgainBtn.on("click", function(){
+        app.resetGame();
+        $modal.hide();
+        console.log('play again btn clicked');
+      });
+
+    })()
+
+
+
+};
+
+
+
 
 
 (function() {
