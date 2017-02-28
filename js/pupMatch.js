@@ -89,41 +89,48 @@ var app = {
         $card.each(function(index) {
             $(this).attr('data-card-value', app.cards[index]);
         });
-        this.assignImage();
+        this.clickAssignImage();
     },
 
     //changes the img src of clicked element using data-card-value
     //then Adds class selected to the element clicked.
-    assignImage: function() {
+    clickAssignImage: function() {
         //this is whatever element you click on:
-        $('.card').off().on('click', function() {
-            console.log('click in clickhandlers ACTIVATED!');
-            //get data-card-value inside data:
-            console.log('data-card-value inside data', $(this).attr('data-card-value'));
-            $(this).attr('src', $(this).attr('data-card-value')).addClass('selected');
-            app.checkMatch();
+        var $card = $('.card');
+        // var $selected = $('.selected');
+        $card.off().on('click', function() {
+              $(this).addClass('selected');
+              if ($('.selected').length < 3 ) {
+                //get data-card-value inside data:
+                // console.log('data-card-value inside data', $(this).attr('data-card-value'));
+                $(this).attr('src', $(this).attr('data-card-value'));
+                console.log('selected len', $('.selected').length);
+            }
+
+            if ($('.selected').length === 2) {
+                if ($('.selected').first().attr('data-card-value') === $('.selected').last().attr('data-card-value')) {
+                    $('.selected').each(function() {
+                        $(this).animate({
+                            opacity: 0
+                        }).removeClass('unmatched').removeClass('selected');
+                    });
+                    app.checkWin();
+                } else {
+                    setTimeout(function() {
+                        $('.selected').each(function() {
+                            $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
+                        });
+                    }, 800);
+                }
+            }
+
         });
     },
 
-    checkMatch: function() {
-        var $selected = $('.selected');
-        if ($selected.length === 2) {
-            if ($selected.first().attr('data-card-value') === $selected.last().attr('data-card-value')) {
-                $selected.each(function() {
-                    $(this).animate({
-                        opacity: 0
-                    }).removeClass('unmatched').removeClass('selected');
-                });
-                app.checkWin();
-            } else {
-                setTimeout(function() {
-                    $selected.each(function() {
-                        $(this).attr('src', "images/gamePics/blue-gradient.jpg").removeClass('selected');
-                    });
-                }, 1000);
-            }
-        }
-    },
+    // checkMatch: function() {
+    //     var $selected = $('.selected');
+    //
+    // },
 
     checkWin: function() {
         if ($('.unmatched').length === 0) {
