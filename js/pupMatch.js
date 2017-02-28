@@ -7,6 +7,7 @@ var clickHandlers = {
         this.hamburger();
         this.game();
         this.reset();
+        this.modal();
     },
 
     hamburger: function() {
@@ -24,6 +25,24 @@ var clickHandlers = {
                 }
             });
         });
+    },
+
+    modal: function () {
+      var $modal = $(".modal");
+      var $openModalBtn = $(".open-modal-btn");
+      var $modalExit = $(".modal-exit");
+
+      $openModalBtn.on("click", function () {
+        console.log('clicked opened modal');
+        $modal.show();
+      });
+
+      $modalExit.on("click", function () {
+        console.log('cliced exit modal');
+        $modal.hide();
+      });
+
+
     },
 
     game: function() {
@@ -48,6 +67,8 @@ var clickHandlers = {
         app.resetGame();
       });
     }
+
+
 
 };
 clickHandlers.init();
@@ -102,6 +123,7 @@ var app = {
         //this is whatever element you click on:
         var $card = $('.card');
         var count = 0;
+        var test = 'test here!';
         // var $selected = $('.selected');
         $card.off().on('click', function() {
               $(this).addClass('selected');
@@ -133,9 +155,20 @@ var app = {
 
             if (count === 6) {
               console.log('you win!');
+              clickHandlers.modal();
             }
 
         });
+
+        return {
+          test: test,
+          count: count,
+          $card: $card,
+        };
+    },
+
+    test: function () {
+      console.log('return val', this.clickAssignImage().test);
     },
 
     // checkMatch: function() {
@@ -143,11 +176,11 @@ var app = {
     //
     // },
 
-    checkWin: function() {
-        if ($('.unmatched').length === 0) {
-            alert("Great job!");
-        }
-    },
+    // checkWin: function() {
+    //     if ($('.unmatched').length === 0) {
+    //         alert("Great job!");
+    //     }
+    // },
 
     resetGame: function() {
         // console.log('resetGame method running');
@@ -161,8 +194,9 @@ var app = {
 
     //auto win game for debugging!
     autoWin: function() {
-        $('.column-1').children('img').removeClass('unmatched');
-        this.checkWin();
+        // $('.column-1').children('img').removeClass('unmatched');
+        // this.checkWin();
+
     },
 
 };
