@@ -104,11 +104,11 @@ color: #42A5F5;
 /*style for contents*/
 
 .content-wrapper {
- /*border: 1px solid blue;*/
+ /*border: 2px solid red;*/
  /*display: none;*/
   overflow: auto;
   width: 93%;
-  margin: auto;
+  margin: 1em auto;
   font-size: 1em;
   line-height: 1.5;
 }
@@ -170,7 +170,6 @@ color: #42A5F5;
 
 .modal-controller {
   text-align: center;
-  /*margin: 2.5em;*/
   /*border: 1px solid blue;*/
 }
 
@@ -184,6 +183,11 @@ color: #42A5F5;
 }
 /*COLUMNS-------------*/
 
+.row {
+  /*border: 1px solid blue;*/
+  margin-bottom: 1.5em;
+
+}
 
 /*PUPPY GAME START*/
 .game-wrapper {
@@ -201,8 +205,6 @@ color: #42A5F5;
   padding: .85em 1.85em;
   transition: 300ms ease-in-out;
   box-shadow: 0 3px 4px 0 rgba(0,0,0,0.225);
-  /*display: block;*/
-  /*margin: 2em auto;*/
   margin-bottom: 1.5em;
 }
 
@@ -220,13 +222,18 @@ color: #42A5F5;
 }
 
 .board-wrapper {
-  margin-bottom: 1.5em;
-
+  /*margin-bottom: 1.5em;*/
 }
 
 .game-header {
   text-align: center;
+  margin-bottom: 1em;
 }
+
+.directions {
+  margin-bottom: 1.5em;
+}
+
 .hidden {
   display: none;
 }
