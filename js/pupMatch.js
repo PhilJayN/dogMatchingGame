@@ -92,11 +92,16 @@ var app = {
         this.clickAssignImage();
     },
 
+    // pairMatched: function () {
+    //   var count = 0;
+    // },
+
     //changes the img src of clicked element using data-card-value
     //then Adds class selected to the element clicked.
     clickAssignImage: function() {
         //this is whatever element you click on:
         var $card = $('.card');
+        var count = 0;
         // var $selected = $('.selected');
         $card.off().on('click', function() {
               $(this).addClass('selected');
@@ -114,7 +119,9 @@ var app = {
                             opacity: 0
                         }).removeClass('unmatched').removeClass('selected');
                     });
-                    app.checkWin();
+                    count++;
+                    console.log('count', count);
+                    // app.checkWin();
                 } else {
                     setTimeout(function() {
                         $('.selected').each(function() {
@@ -122,6 +129,10 @@ var app = {
                         });
                     }, 800);
                 }
+            }
+
+            if (count === 6) {
+              console.log('you win!');
             }
 
         });
