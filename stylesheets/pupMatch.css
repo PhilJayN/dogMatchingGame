@@ -114,7 +114,7 @@ color: #42A5F5;
 }
 
 .modal {
-  /*display: none;*/
+  display: none;
       position: fixed;
       z-index: 1;
       left: 0;
@@ -191,7 +191,7 @@ color: #42A5F5;
 
 /*PUPPY GAME START*/
 .game-wrapper {
-  /*display: none;*/
+  display: none;
    /*border: 1px solid blue;*/
    margin: auto;
 }
@@ -215,6 +215,7 @@ color: #42A5F5;
 
 .play-game-btn {
   display: block;
+   margin: 0 auto 1.5em auto;
 }
 
 .play-again-btn {
@@ -232,10 +233,6 @@ color: #42A5F5;
 
 .directions {
   margin-bottom: 1.5em;
-}
-
-.hidden {
-  display: none;
 }
 
 .card {
