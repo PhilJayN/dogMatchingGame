@@ -83,7 +83,7 @@ var app = {
 
             if (count === 6) {
               console.log('you win!');
-              clickHandlers.modal();
+              handlers.modal();
             }
 
         });
@@ -136,11 +136,7 @@ app.init();
 
 
 
-
-
-
-
-var clickHandlers = {
+var handlers = {
 
     hamburger: (function() {
         var $primaryNav = $(".primary-nav");
@@ -148,7 +144,6 @@ var clickHandlers = {
         var $menuTxt = $(".menu-txt");
 
         $hamburgerWrapper.on("click", function() {
-            console.log('click');
             $primaryNav.slideToggle("normal", function() {
                 if ($primaryNav.is(":visible")) {
                     $menuTxt.text("Hide Menu");
@@ -173,12 +168,6 @@ var clickHandlers = {
         console.log('cliced exit modal');
         $modal.hide();
       });
-
-      return {
-        $modal: $modal
-      };
-
-
     })(),
 
     game: (function() {
@@ -213,9 +202,24 @@ var clickHandlers = {
         console.log('play again btn clicked');
       });
 
-    })()
+    })(),
 
 
+    exitGame: (function () {
+      var $modal = $(".modal");
+      var $gameWrapper = $(".game-wrapper");
+      var $exitGameBtn = $('.exit-game-btn');
+      $exitGameBtn.on("click", function(){
+        app.resetGame();
+        $modal.hide();
+        $gameWrapper.hide();
+
+
+        //then hide the game itself
+        console.log('exigt game btn clicked');
+      });
+
+    })(),
 
 };
 
