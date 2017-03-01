@@ -81,9 +81,14 @@ var app = {
                 }
             }
 
+            count = 6;
             if (count === 6) {
+              var $modal = $(".modal");
               console.log('you win!');
-              handlers.modal();
+              setTimeout(function() {
+                $modal.show();
+              }, 600);
+
             }
 
         });
@@ -138,17 +143,6 @@ app.init();
 
 var handlers = {
 
-  // mobileMenu: (function() {
-  //     var $navBtn = $(".nav-btn");
-  //     var $navItems = $(".nav-items");
-  //
-  //     $navBtn.on("click", function() {
-  //       console.log('clicked');
-  //       $navItems.toggleClass("nav-items-open");
-  //
-  //     });
-  // })(),
-
     hamburger: (function() {
         var $primaryNav = $(".primary-nav");
         var $hamburgerWrapper = $(".hamburger-wrapper");
@@ -168,16 +162,8 @@ var handlers = {
 
         $contactSiteCreator.on("click", function() {
             $primaryNav.slideToggle("normal", function() {
-            //     if ($primaryNav.is(":visible")) {
-            //         $menuTxt.text("Hide Menu");
-            //     } else {
-            //         $menuTxt.text("Show Menu");
-            //     }
             });
         });
-
-
-
 
     })(),
 
@@ -240,7 +226,6 @@ var handlers = {
         app.resetGame();
         $modal.hide();
         $gameWrapper.hide();
-
 
         //then hide the game itself
         console.log('exigt game btn clicked');
