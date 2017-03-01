@@ -71,7 +71,7 @@ transition: all .5s ease-in-out;
 
 .nav-items {
    border: 1px solid blue;
-    
+
 }
 
 
@@ -87,8 +87,9 @@ transition: all .5s ease-in-out;
 }
 
 .primary-nav {
-  /*display: none;*/
+  display: none;
   margin-bottom: .85em;
+  position: absolute;
 }
 
 .nav-wrapper li {
