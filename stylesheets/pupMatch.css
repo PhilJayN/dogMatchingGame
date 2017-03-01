@@ -1,17 +1,13 @@
 /*This is a mobile-first design. default will target mobile devices.
 Media queries will then target tablets and desktops*/
 
-/*This is a mobile-first design. default will target mobile devices.
-Media queries will then target tablets and desktops*/
-
 
 /*-----prevents iPhone auto resizing in landscape mode -----*/
 
 html {
   -webkit-text-size-adjust: none;
-  /*-ms-text-size-adjust: none;*/
+  -ms-text-size-adjust: none;
 }
-
 
 /*apply natural box layout, solves problem with some browser padding and width*/
 
@@ -121,8 +117,7 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.6);
-  /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.6);   /* Black w/ opacity */
 }
 
 .modal-header {
@@ -182,11 +177,11 @@ h1 {
   margin-bottom: 1.5em;
 }
 
+
 /*PUPPY GAME START*/
 
 .game-wrapper {
   display: none;
-  /*border: 1px solid blue;*/
   margin: auto;
 }
 
@@ -197,7 +192,7 @@ h1 {
   background-color: #4285f4;
   color: #f2f2f2;
   padding: .85em 1.85em;
-  transition: 300ms ease-in-out;
+  /*transition: 300ms ease-in-out;*/
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.225);
   margin-bottom: 1.5em;
 }
@@ -225,7 +220,6 @@ h1 {
 }
 
 .column-1 {
-  /*display: none;*/
   width: 33.333330%;
   float: left;
   padding: .70em;
@@ -263,354 +257,6 @@ h1 {
 .footer-wrapper a {
   color: #1976D2;
 }
-
-/*TABLET rule kicks in when @ 641 and above*/
-
-@media only screen and (min-width: 641px) {
-  .hamburger-wrapper {
-    display: none;
-  }
-  .nav-wrapper {
-    width: 92.2%;
-    margin: auto;
-  }
-  .nav-wrapper ul {
-    /*border: 1px solid red;*/
-    text-align: center;
-  }
-  .nav-wrapper li {
-    display: inline;
-  }
-  .nav-wrapper a {
-    display: inline;
-    padding: 1em 1em;
-    border: 1px solid gray;
-    font-size: 1.1em;
-    /*border-bottom: 1px solid #75a5b0;*/
-  }
-  .primary-nav {
-    margin: 3em;
-    display: block!important;
-  }
-  .column-2 {
-    /*width: 33.33333333333334%;*/
-    /*width: 20%;*/
-  }
-  /*CONTENT-------------*/
-  /*COLUMNS-------------*/
-  /*.column-6 {
-    width: 50%;
-    float: left;
-  }*/
-}
-
-
-/*end of tablets*/
-
-
-/*or try breakpoint at 1141px */
-
-
-/*DESKTOP*/
-
-@media only screen and (min-width: 1140px) {
-  header, nav, .row, footer {
-    max-width: 900px;
-    margin: 0 auto;
-    border: 3px solid red;
-  }
-  .nav-wrapper a {
-    transition: background .3s linear;
-  }
-  .nav-wrapper a:hover {
-    background-color: #75a5b0;
-  }
-}
-
-
-/* ----- OTHER STUFF ----*/
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/*-----prevents iPhone auto resizing in landscape mode -----*/
-
-html {
-  -webkit-text-size-adjust: none;
-  /*-ms-text-size-adjust: none;*/
-}
-
-
-/*apply natural box layout, solves problem with some browser padding and width*/
-
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #fbfbfb;
-  color: rgb(28, 27, 27);
-  font-family: 'Padauk', sans-serif;
-}
-
-button {
-  cursor: pointer;
-}
-
-h1 {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.header-wrapper {
-  width: 85%;
-  margin: 1em auto;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.main-heading {
-  padding: .35em;
-  font-size: 1.75em;
-  font-family: 'Boogaloo', cursive;
-}
-
-.secondary-heading {
-  font-family: 'Open Sans', sans-serif;
-}
-
-.site-logo {
-  border-radius: 50%;
-  display: block;
-  margin: .50em auto;
-  -webkit-box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
-  -moz-box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
-  box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
-}
-
-.nav-wrapper {
-  /*width: 92.2%;*/
-  margin: auto;
-  margin-top: 0;
-}
-
-.hamburger-wrapper {
-  cursor: pointer;
-  margin: 1em 0 0 10px;
-}
-
-.primary-nav {
-  background-color: white;
-  opacity: 1;
-  display: none;
-  margin-bottom: .85em;
-  position: absolute;
-  height: 2000px;
-  width: 700px;
-  width: 100%;
-  /*border: 1px solid purple;*/
-  margin-left: 10px;
-}
-
-.nav-wrapper a {
-  padding: 1em 0;
-  display: block;
-  text-decoration: none;
-  color: black;
-  border-bottom: 1px solid #75a5b0;
-}
-
-.fa-bars {
-  color: #42A5F5;
-}
-
-
-/*CONTENT-------------*/
-
-
-/*style for contents*/
-
-.content-wrapper {
-  /*border: 2px solid red;*/
-  /*display: none;*/
-  overflow: auto;
-  width: 93%;
-  margin: 1em auto;
-  font-size: 1em;
-  line-height: 1.5;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.6);
-  /* Black w/ opacity */
-}
-
-.modal-header {
-  background-color: #BBDEFB;
-  overflow: auto;
-  width: 100%;
-  margin-bottom: 1.5em;
-  /*border: 1px solid blue;*/
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 25% auto;
-  border: 1px solid #888;
-  border-radius: 3px;
-  width: 70%;
-  /*border: 1px solid blue;*/
-}
-
-.modal-content p {
-  font-size: 1.5em;
-}
-
-.modal-exit {
-  color: #EF5350;
-  float: right;
-  font-size: 30px;
-  font-weight: bold;
-  margin-right: 8px;
-  /*border: 1px solid blue;*/
-}
-
-.modal-exit:hover {
-  color: #C62828;
-  cursor: pointer;
-}
-
-.modal p {
-  text-align: center;
-  clear: both;
-  /*border: 1px solid blue;*/
-}
-
-.modal-controller {
-  text-align: center;
-  /*border: 1px solid blue;*/
-}
-
-.smile-face {
-  text-align: center;
-  margin-bottom: 1.5em;
-}
-
-.fa-smile-o {
-  color: #FFC400;
-}
-
-
-/*COLUMNS-------------*/
-
-.row {
-  /*border: 1px solid blue;*/
-  margin-bottom: 1.5em;
-}
-
-
-/*PUPPY GAME START*/
-
-.game-wrapper {
-  display: none;
-  /*border: 1px solid blue;*/
-  margin: auto;
-}
-
-.main-btn-style {
-  border: none;
-  border-radius: 2px;
-  outline: none;
-  background-color: #4285f4;
-  color: #f2f2f2;
-  padding: .85em 1.85em;
-  transition: 300ms ease-in-out;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.225);
-  margin-bottom: 1.5em;
-}
-
-.main-btn-style:hover {
-  background-color: #1565C0;
-}
-
-.play-game-btn {
-  display: block;
-  margin: 0 auto 1.5em auto;
-}
-
-.board-wrapper {
-  /*margin-bottom: 1.5em;*/
-}
-
-.game-header {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.directions {
-  margin-bottom: 1.5em;
-}
-
-.card {
-  float: left;
-}
-
-.column-1 {
-  /*display: none;*/
-  width: 33.333330%;
-  float: left;
-  padding: .70em;
-}
-
-.column-1 img {
-  width: 100%;
-  border-radius: 3px;
-  -webkit-box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
-  -moz-box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
-  box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.column-2 {
-  width: 50%;
-  padding: 2px;
-  float: left;
-}
-
-
-/*prevent imgs from overflowing out of container div*/
-
-.column-2 img {
-  width: 100%;
-  border-radius: 3px;
-  display: block;
-}
-
-.footer-wrapper {
-  background-color: #d4d4b6;
-  background-color: #BBDEFB;
-  clear: both;
-  padding: 1em;
-}
-
-.footer-wrapper a {
-  color: #1976D2;
-}
-
 
 /*TABLET rule kicks in when @ 641 and above*/
 
