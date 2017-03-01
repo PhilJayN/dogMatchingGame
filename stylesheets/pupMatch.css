@@ -271,13 +271,14 @@ h1 {
   .nav-wrapper {
     /*width: 92.2%;*/
     margin: auto;
+     border: 1px solid blue;
   }
   .nav-wrapper ul {
     text-align: center;
   }
   .nav-wrapper li {
     display: inline;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     padding: 1.2em;
   }
   .nav-wrapper a {
@@ -287,31 +288,22 @@ h1 {
     /*border: 1px solid gray;*/
     font-size: 1.1em;
   }
-  /*phone ryule*/
-  /*.primary-nav {
-    background-color: white;
-    opacity: 1;
-  }*/
   .primary-nav {
-    border: 1px solid purple;
-    padding: .5em;
-    margin: 0;
-    margin-bottom: .85em;
+    /*border: 1px solid purple;*/
+    background: #BBDEFB;
+    padding-top: 1.3em;
+    margin: 0; /*Reset margins due to mobile*/
+    margin-bottom: 1em;
     display: block!important;
     height: 3.5em;
     width: 100%;
     position: relative;
   }
-  .column-2 {
-    /*width: 33.33333333333334%;*/
-    /*width: 20%;*/
-  }
+
+
   /*CONTENT-------------*/
   /*COLUMNS-------------*/
-  /*.column-6 {
-    width: 50%;
-    float: left;
-  }*/
+
 }
 
 
