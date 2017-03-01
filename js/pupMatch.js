@@ -163,6 +163,22 @@ var handlers = {
                 }
             });
         });
+
+        var $contactSiteCreator = $(".contact-site-creator");
+
+        $contactSiteCreator.on("click", function() {
+            $primaryNav.slideToggle("normal", function() {
+            //     if ($primaryNav.is(":visible")) {
+            //         $menuTxt.text("Hide Menu");
+            //     } else {
+            //         $menuTxt.text("Show Menu");
+            //     }
+            });
+        });
+
+
+
+
     })(),
 
     modal: (function () {
