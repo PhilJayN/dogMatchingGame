@@ -103,11 +103,7 @@ h1 {
 
 /*CONTENT-------------*/
 
-
-/*style for contents*/
-
 .content-wrapper {
-  /*border: 2px solid red;*/
   /*display: none;*/
   overflow: auto;
   width: 93%;
@@ -134,7 +130,6 @@ h1 {
   overflow: auto;
   width: 100%;
   margin-bottom: 1.5em;
-  /*border: 1px solid blue;*/
 }
 
 .modal-content {
@@ -143,7 +138,6 @@ h1 {
   border: 1px solid #888;
   border-radius: 3px;
   width: 70%;
-  /*border: 1px solid blue;*/
 }
 
 .modal-content p {
@@ -156,7 +150,6 @@ h1 {
   font-size: 30px;
   font-weight: bold;
   margin-right: 8px;
-  /*border: 1px solid blue;*/
 }
 
 .modal-exit:hover {
@@ -167,12 +160,10 @@ h1 {
 .modal p {
   text-align: center;
   clear: both;
-  /*border: 1px solid blue;*/
 }
 
 .modal-controller {
   text-align: center;
-  /*border: 1px solid blue;*/
 }
 
 .smile-face {
@@ -188,10 +179,8 @@ h1 {
 /*COLUMNS-------------*/
 
 .row {
-  /*border: 1px solid blue;*/
   margin-bottom: 1.5em;
 }
-
 
 /*PUPPY GAME START*/
 
@@ -220,14 +209,6 @@ h1 {
 .play-game-btn {
   display: block;
   margin: 0 auto 1.5em auto;
-}
-
-.play-again-btn {
-  /*margin-right: 1em;*/
-}
-
-.board-wrapper {
-  /*margin-bottom: 1.5em;*/
 }
 
 .game-header {
@@ -265,7 +246,6 @@ h1 {
   float: left;
 }
 
-
 /*prevent imgs from overflowing out of container div*/
 
 .column-2 img {
@@ -275,7 +255,6 @@ h1 {
 }
 
 .footer-wrapper {
-  background-color: #d4d4b6;
   background-color: #BBDEFB;
   clear: both;
   padding: 1em;
@@ -284,7 +263,6 @@ h1 {
 .footer-wrapper a {
   color: #1976D2;
 }
-
 
 /*TABLET rule kicks in when @ 641 and above*/
 
@@ -572,10 +550,6 @@ h1 {
 .play-game-btn {
   display: block;
   margin: 0 auto 1.5em auto;
-}
-
-.play-again-btn {
-  /*margin-right: 1em;*/
 }
 
 .board-wrapper {
