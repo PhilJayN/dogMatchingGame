@@ -9,6 +9,7 @@ html {
   -ms-text-size-adjust: none;
 }
 
+
 /*apply natural box layout, solves problem with some browser padding and width*/
 
 * {
@@ -117,7 +118,8 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.6);   /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Black w/ opacity */
 }
 
 .modal-header {
@@ -240,6 +242,7 @@ h1 {
   float: left;
 }
 
+
 /*prevent imgs from overflowing out of container div*/
 
 .column-2 img {
@@ -258,6 +261,7 @@ h1 {
   color: #1976D2;
 }
 
+
 /*TABLET rule kicks in when @ 641 and above*/
 
 @media only screen and (min-width: 641px) {
@@ -265,26 +269,38 @@ h1 {
     display: none;
   }
   .nav-wrapper {
-    width: 92.2%;
+    /*width: 92.2%;*/
     margin: auto;
   }
   .nav-wrapper ul {
-    /*border: 1px solid red;*/
     text-align: center;
   }
   .nav-wrapper li {
     display: inline;
+    border: 1px solid red;
+    padding: 1.2em;
   }
   .nav-wrapper a {
+    border-bottom: none;
     display: inline;
-    padding: 1em 1em;
-    border: 1px solid gray;
+    padding: 2em 2em;
+    /*border: 1px solid gray;*/
     font-size: 1.1em;
-    /*border-bottom: 1px solid #75a5b0;*/
   }
+  /*phone ryule*/
+  /*.primary-nav {
+    background-color: white;
+    opacity: 1;
+  }*/
   .primary-nav {
-    margin: 3em;
+    border: 1px solid purple;
+    padding: .5em;
+    margin: 0;
+    margin-bottom: .85em;
     display: block!important;
+    height: 3.5em;
+    width: 100%;
+    position: relative;
   }
   .column-2 {
     /*width: 33.33333333333334%;*/
