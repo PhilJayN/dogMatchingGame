@@ -63,33 +63,36 @@ h1 {
 
 
 .nav-item-open {
-
   opacity: 1;
 max-height: 2000px;
 transition: all .5s ease-in-out;
 }
 
-.nav-items {
-   border: 1px solid blue;
-
-}
-
-
 .nav-wrapper {
-  width: 92.2%;
+  /*width: 92.2%;*/
   margin: auto;
+  margin-top: 0;
    /*border: 1px solid blue;*/
 }
 
 .hamburger-wrapper {
   cursor: pointer;
-  margin: 2.5em 0 .85em 0;
+  margin: 1em 0 0 10px;
+  /*border: 1px solid blue;*/
 }
 
 .primary-nav {
+  background-color: white;
+  opacity: .98;
   display: none;
   margin-bottom: .85em;
   position: absolute;
+  height: 2000px;
+  width: 700px;
+  width: 100%;
+  /*border: 1px solid purple;*/
+  /*left: 1px;*/
+  margin-left: 10px;
 }
 
 .nav-wrapper li {

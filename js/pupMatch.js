@@ -138,16 +138,16 @@ app.init();
 
 var handlers = {
 
-  mobileMenu: (function() {
-      var $navBtn = $(".nav-btn");
-      var $navItems = $(".nav-items");
-
-      $navBtn.on("click", function() {
-        console.log('clicked');
-        $navItems.toggleClass("nav-items-open");
-
-      });
-  })(),
+  // mobileMenu: (function() {
+  //     var $navBtn = $(".nav-btn");
+  //     var $navItems = $(".nav-items");
+  //
+  //     $navBtn.on("click", function() {
+  //       console.log('clicked');
+  //       $navItems.toggleClass("nav-items-open");
+  //
+  //     });
+  // })(),
 
     hamburger: (function() {
         var $primaryNav = $(".primary-nav");
