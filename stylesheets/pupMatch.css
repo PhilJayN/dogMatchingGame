@@ -61,6 +61,20 @@ h1 {
   box-shadow: 3px 3px 6px 0 rgba(89, 89, 89, 0.6);
 }
 
+
+.nav-item-open {
+
+  opacity: 1;
+max-height: 2000px;
+transition: all .5s ease-in-out;
+}
+
+.nav-items {
+   border: 1px solid blue;
+    
+}
+
+
 .nav-wrapper {
   width: 92.2%;
   margin: auto;
@@ -73,7 +87,7 @@ h1 {
 }
 
 .primary-nav {
-  display: none;
+  /*display: none;*/
   margin-bottom: .85em;
 }
 
@@ -352,15 +366,11 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
       background-color: #75a5b0;
     }
   }
+
+
   /* ----- OTHER STUFF ----*/
   .clearfix:after {
     content: "";
     display: table;
     clear: both;
   }
-
-
-
-  /*background: rgb(255,255,255);
-  background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(161,206,230,1) 103%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#abd1ea',GradientType=1 );*/
