@@ -304,7 +304,7 @@ h1 {
 .gallery {
    /*border: 3px solid cyan;*/
    overflow: auto;
-   width:45%; /*Adjust to get images inside sm or bigger*/
+   width:100%; /*Adjust to get images inside sm or bigger*/
    margin: auto;
 }
 
