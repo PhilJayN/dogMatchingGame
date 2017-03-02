@@ -81,7 +81,7 @@ var app = {
                 }
             }
 
-            // count = 6;
+            count = 6;
             if (count === 6) {
               var $modal = $(".modal");
               console.log('you win!');
@@ -222,12 +222,25 @@ var handlers = {
       var $modal = $(".modal");
       var $gameWrapper = $(".game-wrapper");
       var $exitGameBtn = $('.exit-game-btn');
+      var $playGameBtn = $(".play-game-btn");
+
       $exitGameBtn.on("click", function(){
         app.resetGame();
         $modal.hide();
         $gameWrapper.hide();
+        if ($gameWrapper.is(":visible")) {
+            $playGameBtn.text("Hide Game");
+        } else {
+            $playGameBtn.text("Play Game");
+        }
 
-        //then hide the game itself
+
+
+
+//neds to toggle play-game-btn text
+
+
+
         console.log('exigt game btn clicked');
       });
 
