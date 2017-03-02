@@ -150,11 +150,11 @@ var handlers = {
 
         $hamburgerWrapper.on("click", function() {
             $primaryNav.slideToggle("normal", function() {
-                if ($primaryNav.is(":visible")) {
-                    $menuTxt.text("Hide Menu");
-                } else {
-                    $menuTxt.text("Show Menu");
-                }
+                // if ($primaryNav.is(":visible")) {
+                //     $menuTxt.text("Hide Menu");
+                // } else {
+                //     $menuTxt.text("Show Menu");
+                // }
             });
         });
 
