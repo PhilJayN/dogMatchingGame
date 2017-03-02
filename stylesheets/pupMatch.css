@@ -211,7 +211,7 @@ h1 {
   border: none;
   border-radius: 2px;
   outline: none;
-  background-color: #F44336;
+  background-color: #EF5350;
   color: #f2f2f2;
   padding: .85em 1.85em;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.225);
@@ -219,10 +219,14 @@ h1 {
 }
 
 
+
 .main-btn-style:hover {
-  background-color: #1565C0;
+  background-color: #1976D2;
 }
 
+.danger-btn-style:hover {
+  background-color: #E53935;
+}
 .play-game-btn {
   display: block;
   margin: 0 auto 1.5em auto;
