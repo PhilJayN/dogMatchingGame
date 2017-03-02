@@ -336,6 +336,11 @@ h1 {
     display: block;
   }
 
+  .footer-wrapper, .push {
+    height: 75px;
+  }
+
+
 }
 
 
