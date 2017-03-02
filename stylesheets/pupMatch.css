@@ -349,17 +349,17 @@ h1 {
    overflow: auto;
 }
 
-.column-1 {
-  width: 16.6666667%;     /*6 squares per row*/
-  float: left;
-  padding: .30em;
-}
-
 .gallery {
    /*border: 3px solid cyan;*/
    overflow: auto;
    width:100%; /*Adjust to get images inside sm or bigger*/
    margin: auto;
+}
+
+.column-1 {
+  width: 33.33333334%;     /*3 squares per row*/
+  float: left;
+  padding: .30em;
 }
 
   .column-2 {
@@ -380,6 +380,10 @@ h1 {
     height: 75px;
   }
 
+  .game-wrapper {
+    margin-bottom: 1.5em;
+  }
+
 
 }
 
@@ -392,7 +396,7 @@ h1 {
 
 /*DESKTOP*/
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 1024px) {
   header, nav, .row {
     max-width: 900px;
     margin: 0 auto;
@@ -409,6 +413,20 @@ h1 {
     margin: auto;
     margin-bottom: 1.5em;
   }
+
+/*6 squares per row*/
+  .column-1 {
+    width: 33.3333334%;
+    float: left;
+    padding: .30em;
+  }
+
+  .column-1 {
+    width: 16.66666674%;
+    float: left;
+    padding: .30em;
+  }
+
 
   .footer-wrapper {
       height: 85px;
