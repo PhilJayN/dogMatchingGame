@@ -81,7 +81,7 @@ var app = {
                 }
             }
 
-            count = 6;
+            // count = 6;
             if (count === 6) {
               var $modal = $(".modal");
               console.log('you win!');
@@ -190,6 +190,7 @@ var handlers = {
         $playGameBtn.on("click", function() {
             console.log('click play game');
             $gameWrapper.slideToggle("normal", function() {
+
                 if ($gameWrapper.is(":visible")) {
                     $playGameBtn.text("Hide Game");
                 } else {
@@ -200,8 +201,11 @@ var handlers = {
     })(),
 
     reset: (function () {
-      var $resetBtn = $('.reset-btn');
-      $resetBtn.on("click", function(){
+      var $resetGameBtn = $('.reset-game-btn');
+      $resetGameBtn.on("click", function(){
+        //ask for confirm first:
+        // alert('This will reset your progress and start a new game!');
+        //then reset game:
         app.resetGame();
       });
     })(),
