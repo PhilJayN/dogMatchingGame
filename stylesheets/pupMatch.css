@@ -81,7 +81,6 @@ h1 {
   height: 2000px;
   width: 700px;
   width: 100%;
-  /*border: 1px solid purple;*/
   margin-left: 10px;
 }
 
@@ -252,7 +251,7 @@ h1 {
 }
 
 .footer-wrapper {
-  background-color: #BBDEFB;
+  background-color: #E3F2FD;
   clear: both;
   padding: 1em;
 }
@@ -284,7 +283,7 @@ h1 {
   }
   .primary-nav {
     /*border: 1px solid purple;*/
-    background: #BBDEFB;
+    background: #90CAF9;
     padding-top: 1.3em;
     margin: 0; /*Reset margins due to mobile*/
     margin-bottom: 1em;
@@ -343,7 +342,7 @@ h1 {
     transition: background .3s linear;
   }
   .nav-wrapper a:hover {
-    background-color: #75a5b0;
+    background-color: #42A5F5;
   }
   .footer-wrapper {
       position: absolute;
