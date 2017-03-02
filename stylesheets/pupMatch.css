@@ -193,6 +193,7 @@ h1 {
 .game-wrapper {
   display: none;
   margin: auto;
+   border: 1px solid blue;
 }
 
 .main-btn-style {
@@ -217,7 +218,6 @@ h1 {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.225);
   margin-bottom: 1.5em;
 }
-
 
 
 .main-btn-style:hover {
@@ -245,6 +245,10 @@ h1 {
 
 .directions {
   margin-bottom: 1.5em;
+}
+
+.board-wrapper {
+   border: 1px solid blue;
 }
 
 .card {
@@ -296,6 +300,20 @@ h1 {
   color: #1976D2;
 }
 
+/*this adjusts game card size when phone is in landscape mode*/
+
+@media only screen and (min-width: 568px) {
+  .hamburger-wrapper {
+    display: none;
+  }
+  .column-1 {
+    width: 16.6666667%;     /*6 squares per row*/
+    float: left;
+    padding: .30em;
+  }
+
+  }
+
 
 /*TABLET rule kicks in when @ 641 and above*/
 
@@ -333,8 +351,13 @@ h1 {
   /*COLUMNS-------------*/
 
 .row {
-   /*border: 1px solid red;*/
    overflow: auto;
+}
+
+.column-1 {
+  width: 16.6666667%;     /*6 squares per row*/
+  float: left;
+  padding: .30em;
 }
 
 .gallery {
