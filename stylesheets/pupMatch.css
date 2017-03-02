@@ -242,7 +242,6 @@ h1 {
   float: left;
 }
 
-
 /*prevent imgs from overflowing out of container div*/
 
 .column-2 img {
@@ -293,9 +292,37 @@ h1 {
     position: static;
   }
 
-
   /*CONTENT-------------*/
   /*COLUMNS-------------*/
+
+.row {
+   /*border: 1px solid red;*/
+   overflow: auto;
+}
+
+.gallery {
+   /*border: 3px solid cyan;*/
+   overflow: auto;
+   width:45%; /*Adjust to get images inside sm or bigger*/
+   margin: auto;
+}
+
+  .column-2 {
+     /*border: 1px solid blue;*/
+    width: 33.3333333333%;
+    /*width: 16.666%;*/
+    padding: 2px;
+  }
+
+/*.column-2 a {
+  text-align: center;
+}*/
+  /*prevent imgs from overflowing out of container div*/
+  .column-2 img {
+    width: 100%;
+    border-radius: 3px;
+    display: block;
+  }
 
 }
 
@@ -312,7 +339,6 @@ h1 {
   header, nav, .row, footer {
     max-width: 900px;
     margin: 0 auto;
-    border: 3px solid red;
   }
   .nav-wrapper a {
     transition: background .3s linear;
