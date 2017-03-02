@@ -81,7 +81,7 @@ var app = {
                 }
             }
 
-            count = 6;
+            // count = 6;
             if (count === 6) {
               var $modal = $(".modal");
               console.log('you win!');

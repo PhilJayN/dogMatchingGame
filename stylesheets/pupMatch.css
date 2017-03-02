@@ -7,6 +7,8 @@ Media queries will then target tablets and desktops*/
 html {
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
+  height: 100%;
+  margin: 0;
 }
 
 
@@ -22,6 +24,11 @@ body {
   background-color: #fbfbfb;
   color: rgb(28, 27, 27);
   font-family: 'Padauk', sans-serif;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
 }
 
 button {
@@ -255,6 +262,12 @@ h1 {
   background-color: #E3F2FD;
   clear: both;
   padding: 1em;
+
+  height: 50px;
+}
+
+.push {
+  height: 50px;
 }
 
 .footer-wrapper a {
