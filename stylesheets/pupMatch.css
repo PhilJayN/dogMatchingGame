@@ -193,7 +193,6 @@ h1 {
 .game-wrapper {
   display: none;
   margin: auto;
-   border: 1px solid blue;
 }
 
 .main-btn-style {
@@ -245,10 +244,6 @@ h1 {
 
 .directions {
   margin-bottom: 1.5em;
-}
-
-.board-wrapper {
-   border: 1px solid blue;
 }
 
 .card {
